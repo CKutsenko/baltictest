@@ -1,0 +1,36 @@
+.header{
+  &__info{
+    text-align: right;
+      @include mq($from:xs, $until:sm){
+    text-align: center;
+  }
+}
+
+  &__city{
+    font-weight: bold;
+  }
+
+  &__email{
+    margin-top: 0px;
+  }
+
+   &__tel{
+     margin-bottom: 8px;
+   }
+
+  .nav{
+    margin-top: 20px;
+  }
+}
+
+.logo{
+  display: block;
+  margin-top: 10px;
+  @include mq($from:xs, $until:sm){
+    text-align: center;
+  }
+}
+
+.row-header {
+  justify-content: space-between;
+}

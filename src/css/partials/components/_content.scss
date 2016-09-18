@@ -1,0 +1,13 @@
+.content{
+  text-align: left;
+
+  &__title{
+    margin: 25px 0 45px;
+    font-size: $font-size-title;
+    color: $dark-blue;
+    font-weight: $semibold;
+  }
+  &__offices{
+      margin-top: 40px;
+  }
+}

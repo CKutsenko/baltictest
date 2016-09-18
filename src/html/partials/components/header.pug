@@ -1,0 +1,37 @@
+include ../abstracts/bemto/bemto.pug
+
+// Header
++b.HEADER.header
+  .container
+    .row.row-header
+      .col-xs-12.col-sm-6
+        // Logo
+        +b.A.logo(href="index.html")
+          img(src="img/logo.png", alt="logo", title="logo")
+      .col-xs-12.col-sm-6
+        +e.info
+          +e.P.city Санкт-Петербург
+          +e.P.tel
+            a(href="tel:+78124935927", target="_blank") (812) 493-59-27
+          +e.P.email
+            a(href="mailto:info@baltictest.info", target="_blank") info@baltictest.info
+  .nav-bgr
+    .container
+          // Nav menu
+          +b.NAV.nav
+            +e.hamburger
+              +b.A.hamburger(href="#")
+            +e.UL.list
+              +e.item.item--active
+                +e.A.link.link--active(href="index.html") Главная
+              +e.item
+                +e.A.link(href="page.html") Наши услуги
+              +e.item
+                +e.A.link(href="page.html") Вопрос-ответ
+              +e.item
+                +e.A.link(href="page.html") Заказать консультацию
+              +e.item
+                +e.A.link(href="page-contacts.html") Контакты
+              +b.search
+                +e.A.icon(href="javascript:void(0);")
+

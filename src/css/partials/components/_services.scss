@@ -1,0 +1,135 @@
+.services{
+  text-align: center;
+
+  &__item:nth-of-type(1){
+    .services__wrapper:after {
+     @include sprite($s-serv01);
+    }
+  }
+
+  &__item:nth-of-type(2){
+    .services__wrapper:after {
+     @include sprite($s-serv02);
+    }
+  }
+
+  &__item:nth-of-type(3){
+    .services__wrapper:after {
+     @include sprite($s-serv03);
+    }
+  }
+
+  &__item:nth-of-type(4){
+    .services__wrapper:after {
+     @include sprite($s-serv04);
+    }
+  }
+
+  &__item:nth-of-type(5){
+    .services__wrapper:after {
+     @include sprite($s-serv05);
+    }
+  }
+
+  &__item:nth-of-type(6){
+    .services__wrapper:after {
+     @include sprite($s-serv06);
+    }
+  }
+
+  &__item:nth-of-type(7){
+    .services__wrapper:after {
+     @include sprite($s-serv07);
+    }
+  }
+
+  &__item:nth-of-type(8){
+    .services__wrapper:after {
+     @include sprite($s-serv08);
+    }
+  }
+
+  &__title{
+    margin: 25px 0 45px;
+    font-size: $font-size-title;
+    background-color: $light-blue;
+    color: $white;
+    font-weight: $bold;
+    text-transform: uppercase;
+    padding: 7px 0;
+    z-index: 10;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -25%;
+      left: -8px;
+      @include sprite($s-serv-icon);
+      background-color: $white;
+      padding: 23px;
+      border-radius: 50%;
+      border: 4px solid $light-blue;
+    }
+  }
+
+  &__wrapper{
+    display: block;
+    text-align: center;
+    position: relative;
+    margin: 15px;
+    position: relative;
+    overflow: hidden;
+    color: $white;
+    transition: 1s ease;
+
+    &:hover {
+      color: $white;
+    }
+
+    &:hover .services__tringle,
+    &:hover .services__type {
+     background-color: $red;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      z-index: 200;
+    }
+  }
+
+  &__tringle {
+    width: 150px;
+    height: 150px;
+    background-color: $light-blue;
+    position: absolute;
+    transform: rotate(45deg);
+    right: -75px;
+    top: -75px;
+    z-index: 100;
+  }
+
+  &__tringle_2 {
+    width: 160px;
+    height: 160px;
+    background-color: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    transform: rotate(45deg);
+    right: -81px;
+    top: -81px;
+    z-index: 10;
+    border: 1px dashed $light-blue;
+  }
+
+  &__type{
+    line-height: 17px;
+    padding: 15px 0;
+    margin: 0;
+    background-color: $light-blue;
+    width: 100%;
+  }
+}
