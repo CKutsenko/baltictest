@@ -84,13 +84,12 @@ jQuery(document).ready(function($){
   }
 
   /* галерея "с нами уже работают" */
-  $('.reviews-section__gallery').slick({
+  $('.map__wrapper').slick({
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: '0',
-    variableWidth: true
+    dots: true,
+    arrows: false
   });
 
   /* Review-section in the modal window */

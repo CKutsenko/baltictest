@@ -2,7 +2,6 @@
   background-color: $light-blue;
 }
 
-
 .nav{
   font-size: $base-font-size + 2px;
   color: $white;
@@ -29,17 +28,18 @@
   }
 
   &__item{
-    padding: 13px 15px;
-    &--active {
-      background-color: $red;
-    }
-    @include mq($from:xs, $until:md){
-      padding-bottom: 15px;
-    }
+    // padding: 13px 15px;
+
+    // &--active {
+    //   background-color: $red;
+    // }
+    // @include mq($from:xs, $until:md){
+    //   padding-bottom: 15px;
+    // }
     &:hover, &:focus {
       .nav__link {
-        border-bottom: 1px solid $white;
-        color: $white;
+        // border-bottom: 1px solid $white;
+        // color: $white;
       }
     }
     &:active {
@@ -56,8 +56,16 @@
 
 
   &__link{
+    display: inline-block;
+    padding: 13px 15px;
     color: $white;
+    @include mq($from:xs, $until:xl){
+      display: block;
+      padding: 15px;
+    }
     &:hover, &:focus {
+      background-color: $white;
+      color: $light-blue;
     }
     @include mq($from:xs, $until:md){
       padding-bottom: 5px;
@@ -66,9 +74,9 @@
       font-weight: bold;
       background-color: $red;
 
-    &:hover, &:focus {
-      border-bottom: 1px solid $red;
-      }
+    // &:hover, &:focus {
+    //   border-bottom: 1px solid $red;
+    //   }
     }
   }
   &__title{
