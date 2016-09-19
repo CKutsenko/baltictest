@@ -73,7 +73,7 @@ $btn-border:                  #2e3c88;
 $btn-box-shadow:              rgba($btn-border, 0.2);
 $btn-box-shadow-hover:        darken($dark-blue, 0.2);
 $grey:                        #9d9d9d;
-$light-grey:                  #dddddd;
+$light-grey:                  #f5f5fa;
 $border-grey:                 #bebebe;
 
 $success:                     #5cb85c;
@@ -100,6 +100,7 @@ $link-color-white--hover:     darken($link-color-white, 20%);
 //------------------------------------------------------------------------------
 
 $font-family:                 "Open Sans", Helvetica, Arial, sans-serif;
+$arial:                        Arial, "Helvetica Neue", Helvetica, sans-serif;
 //$font-family--serif:          Georgia, "Times New Roman", Times, serif;
 //$font-family--monospace:      Menlo, Monaco, Consolas, "Courier New", monospace;
 

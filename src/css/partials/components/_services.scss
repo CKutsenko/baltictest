@@ -49,6 +49,12 @@
     }
   }
 
+    &__item:nth-of-type(9){
+    .services__wrapper:after {
+     @include sprite($s-serv09);
+    }
+  }
+
   &__title{
     margin: 25px 0 45px;
     font-size: $font-size-title;
