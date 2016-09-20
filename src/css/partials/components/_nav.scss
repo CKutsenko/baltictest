@@ -28,31 +28,10 @@
   }
 
   &__item{
-    // padding: 13px 15px;
-
-    // &--active {
-    //   background-color: $red;
-    // }
-    // @include mq($from:xs, $until:md){
-    //   padding-bottom: 15px;
-    // }
-    &:hover, &:focus {
-      .nav__link {
-        // border-bottom: 1px solid $white;
-        // color: $white;
-      }
-    }
-    &:active {
-      .nav__link{
-      background-color: $white;
-      color: $light-blue;
-    }
-  }
-
   .dropdown-menu{
       display: flex;
-     }
     }
+  }
 
 
   &__link{
@@ -64,19 +43,21 @@
       padding: 15px;
     }
     &:hover, &:focus {
+      text-decoration: underline;
+      color: $white;
+    }
+    &:active {
       background-color: $white;
-      color: $light-blue;
+      color: $red;
+      text-decoration: none;
     }
     @include mq($from:xs, $until:md){
       padding-bottom: 5px;
     }
+
     &--active{
       font-weight: bold;
       background-color: $red;
-
-    // &:hover, &:focus {
-    //   border-bottom: 1px solid $red;
-    //   }
     }
   }
   &__title{

@@ -74,6 +74,18 @@ jQuery(document).ready(function($){
     });
   }
 
+    /* Hamburger */
+  if ($(window).width() < 768) {
+    var footerNavItem = $('.footer .footer-nav__item');
+    $('.footer-nav__hamburger').show();
+    $(footerNavItem).hide();
+    $('.footer-nav__hamburger').click(function(e){
+      e.preventDefault();
+      $(this).toggleClass('footer-nav__hamburger--close');
+      $(footerNavItem).toggle();
+    });
+  }
+
   /* Открывание меню поиска по клику на иконку */
   if ($(window).width() <= 1024) {
     $('.search__form').hide();
