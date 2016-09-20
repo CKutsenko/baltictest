@@ -6,8 +6,6 @@ include ../abstracts/bemto/bemto.pug
     .container
       // Footer nav
       +b.NAV.footer-nav
-        +e.hamburger
-          +b.A.hamburger(href="#")
         +e.UL.list
           +e.item.nav__item--active
             +e.A.link.nav__link--active(href="index.html") Главная
@@ -28,21 +26,22 @@ include ../abstracts/bemto/bemto.pug
           .col-xs-12.col-md-6
             +e.P.copyright Все права защищены   &#169; Центр сертификации БалтикТест 2016
           .col-xs-12.col-md-6
-              +e.LI.item
-                +e.A.link(href="https://facebook.com" target="_blank")
-                  img(src="img/soc-fb.png", alt="fb", title="facebook")
-              +e.LI.item
-                +e.A.link(href="https://vk.com" target="_blank")
+              +e.UL.list
+                +e.LI.item
+                  +e.A.link(href="https://facebook.com" target="_blank")
+                    img(src="img/soc-fb.png", alt="fb", title="facebook")
+                +e.LI.item
+                  +e.A.link(href="https://vk.com" target="_blank")
                   img(src="img/soc-vk.png", alt="vk", title="vkontakte")
-              +e.LI.item
-                +e.A.link(href="https://instagram.com/" target="_blank")
-                  img(src="img/soc-insta.png", alt="instagram", title="instagram")
-              +e.LI.item
-                +e.A.link(href="https://twitter.com/" target="_blank")
-                  img(src="img/soc-twitter.png", alt="twitter", title="twitter")
-              +e.LI.item
-                +e.A.link(href="#" target="_blank")
-                  img(src="img/soc-rss.png", alt="rss", title="rss")
+                +e.LI.item
+                  +e.A.link(href="https://instagram.com/" target="_blank")
+                    img(src="img/soc-insta.png", alt="instagram", title="instagram")
+                +e.LI.item
+                  +e.A.link(href="https://twitter.com/" target="_blank")
+                    img(src="img/soc-twitter.png", alt="twitter", title="twitter")
+                +e.LI.item
+                  +e.A.link(href="#" target="_blank")
+                    img(src="img/soc-rss.png", alt="rss", title="rss")
 
 
 

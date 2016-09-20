@@ -222,12 +222,16 @@
 
 
 .socials {
-
   padding-bottom: 20px;
+  @include mq($from:xs, $until:md){
+    text-align: center;
+    }
 
-  ul {
+  &__list {
     @include mq($from:xs, $until:md){
      margin: 0;
+     text-align: center;
+     padding-left: 0;
     }
   }
 
@@ -245,8 +249,7 @@
     margin-left: 15px;
 
     @include mq($from:xs, $until:md){
-      text-align: center;
-      float: left;
+      float: none;
       margin-left: 5px;
     }
   }
