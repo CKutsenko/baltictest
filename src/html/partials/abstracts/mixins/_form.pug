@@ -1,5 +1,5 @@
 - var application = [{name: 'application', id: 'formApplication', title : 'Заказать документ', application: true, question: false, call: false, button: 'Заказать', success: 'Ваша заявка отправлена'}]
-- var question = [{name: 'question', id: 'formQuestion', title : 'Для получения бесплатно консультации заполните форму', application: false, question: true, call: false, button: 'Спросить', success: 'Ваш вопрос отправлен'}]
+- var question = [{name: 'question', id: 'formQuestion', title : 'Для получения бесплатной консультации заполните форму', application: false, question: true, call: false, button: 'Спросить', success: 'Ваш вопрос отправлен'}]
 - var call = [{name: 'call', id: 'formCall', title : 'Заказать звонок', application: false, question: false, call: true, button: 'Заказать звонок', success: 'Ваша заявка отправлена'}]
 
 
@@ -24,26 +24,26 @@ mixin form(items)
             p.help-block.help-block-error Ошибка заполнения поля формы
 
         if item.question
-          .form-group.field-question-name.required.has-success.col-xs-12.col-sm-6.col-lg-3
+          .form-group.field-question-name.required.has-success
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-email.required.has-success.col-xs-12.col-sm-6.col-lg-3
+          .form-group.field-question-email.required.has-success
             +e.INPUT.input(type='phone', name='phone', placeholder='Ваш телефон*')
             p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.required
-          .form-group.field-question-email.required.has-success.col-xs-12.col-sm-6.col-lg-3
+          .form-group.field-question-email.required.has-success
             +e.INPUT.input(type='text', name='country', placeholder='Ваша страна*')
             p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.required
-          .form-group.field-question-email.required.has-success.col-xs-12.col-sm-6.col-lg-3
+          .form-group.field-question-email.required.has-success
             +e.INPUT.input(type='text', name='Region', placeholder='Ваш регион')
             p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.required
-          .form-group.field-question-email.required.has-success.col-xs-12.col-sm-6.col-lg-3
+          .form-group.field-question-email.required.has-success
             +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
             p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.required
-          .form-group.field-question-email.required.has-success.col-xs-12.col-sm-6.col-lg-3
+          .form-group.field-question-email.required.has-success
             +e.INPUT.input(type='text', name='Capcha', placeholder='Введите код с картинки')
             p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.required

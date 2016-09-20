@@ -1,6 +1,10 @@
 .services{
   text-align: center;
 
+  &__item {
+  @include transition();
+  }
+
   &__item:nth-of-type(1){
     .services__wrapper:after {
      @include sprite($s-serv01);
@@ -155,5 +159,19 @@
     margin: 0;
     background-color: $light-blue;
     width: 100%;
+  }
+}
+
+.services-form {
+  text-align: center;
+
+  &__question {
+    font-size: $font-size;
+    margin-bottom: 7px;
+    color: $red;
+  }
+
+  &__consult {
+    margin-top: 7px;
   }
 }
