@@ -1175,7 +1175,8 @@ h4 {
   left: -150px;
   top: 50%;
   display: block;
-  z-index: 1000; }
+  z-index: 1000;
+  transition: all 0.325s ease 0s; }
   .call:hover, .call:focus, .call:active {
     left: 0; }
   .call__text {
@@ -1343,6 +1344,31 @@ h4 {
   background-position: -231px -258px;
   width: 21px;
   height: 21px; }
+
+.totop {
+  background-color: #33bee5;
+  width: 80px;
+  height: 20px;
+  position: fixed;
+  left: 90%;
+  top: 93%;
+  z-index: 1000;
+  text-align: center;
+  display: block; }
+  .totop__text {
+    color: #ffffff;
+    margin-bottom: 30px;
+    position: relative;
+    top: -37px;
+    font-size: 14px; }
+  .totop__tringle {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 15px solid #33bee5;
+    position: relative;
+    top: -37px; }
 
 .features {
   text-align: center; }
@@ -2825,6 +2851,9 @@ __text {
     -ms-transform: none;
     transform: none;
     display: inline-block; }
+  .totop {
+    left: 72%;
+    top: 96%; }
   .advantages__title {
     text-align: center; }
   .map__bgr {
@@ -2856,7 +2885,10 @@ __text {
     right: 0; }
   .search__form {
     position: absolute;
-    right: 0; } }
+    right: 0; }
+  .totop {
+    left: 87%;
+    top: 96%; } }
 
 @media (min-width: 48em) and (max-width: 63.99em) {
   .search__icon {

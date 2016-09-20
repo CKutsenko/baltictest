@@ -23,6 +23,27 @@ jQuery(document).ready(function($){
     $(this).fadeOut();
   });
 
+ /* Scroll to top */
+
+$(document).ready(function () {
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.totop').fadeIn();
+        } else {
+            $('.totop').fadeOut();
+        }
+    });
+
+    $('.totop').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
+});
+
   /* изменение названия, телефона и почты при выборе города */
   $('.city__item').on('click', function(){
     $('.city__name').html($(this).html());
