@@ -2432,6 +2432,16 @@ __text {
 .services-socials__link:hover img {
   opacity: 1; }
 
+.interesting {
+  text-align: center;
+  background-color: #ebebf0; }
+  .interesting .row {
+    text-align: left;
+    background-color: #f5f5fa; }
+
+.interesting-article {
+  max-width: 25%; }
+
 .content {
   text-align: left; }
   .content__title {
