@@ -1,13 +1,12 @@
 .breadcrumbs{
-  font-size: $font-size-small;
+  font-size: $font-size-content;
+  color: $breadcrumbs-grey;
+  padding-top: 30px;
+
   a{
-    margin-right: 10px;
-  }
-  a:not(:first-child){
-    margin-left: 10px;
+    color: $breadcrumbs-grey;
   }
   span{
     display: inline-block;
-    margin-left: 10px;
   }
 }
