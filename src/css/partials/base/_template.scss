@@ -67,3 +67,17 @@ h4{
   font-size: $font-size;
   font-weight: normal;
 }
+
+.serv-wrapper70 {
+  max-width: 70%;
+  @include mq($from:xs, $until:xl){
+    min-width: 100%;
+  }
+}
+
+.serv-wrapper30 {
+  max-width: 30%;
+  @include mq($from:xs, $until:xl){
+    min-width: 100%;
+  }
+}

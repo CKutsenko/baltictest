@@ -1,62 +1,94 @@
-- var application = [{name: 'application', id: 'formApplication', title : 'Заказать документ', application: true, question: false, call: false, button: 'Заказать', success: 'Ваша заявка отправлена'}]
-- var question = [{name: 'question', id: 'formQuestion', title : 'Для получения бесплатной консультации заполните форму', application: false, question: true, call: false, button: 'Спросить', success: 'Ваш вопрос отправлен'}]
-- var call = [{name: 'call', id: 'formCall', title : 'Заказать звонок', application: false, question: false, call: true, button: 'Заказать звонок', success: 'Ваша заявка отправлена'}]
+- var application = [{name: 'application', id: 'formApplication', title : 'Заказать документ', application: true, button: 'Заказать документ', success: 'Ваша заявка отправлена'}]
+- var question = [{name: 'question', id: 'formQuestion', title : 'Задать вопрос', question: true,  button: 'Спросить', success: 'Ваш вопрос отправлен'}]
+- var call = [{name: 'call', id: 'formCall', title : 'Заказать звонок', call: true, button: 'Заказать звонок', success: 'Ваша заявка отправлена'}]
+- var review = [{name: 'review', id: 'formReview', title : 'Оставить отзыв', review: true, button: 'Оставить отзыв', success: 'Отзыв успешно оставлен'}]
 
 
 mixin form(items)
   each item in items
-    +b.SECTION(class= 'form--' + item.name).container
-      form(action='', method='', id= item.id, class="row")
-        +e.H3.title.col-xs-12 #{item.title}
+    +b.SECTION(class= 'form--' + item.name)
+      +e.FORM.form(action='', method='', id= item.id)
+        //- +e.A.close(href='#') Закрыть
+        +e.H3.title #{item.title}
 
         if item.application
-          .form-group.field-question-production.required
-            +e.INPUT.input(type='text', name='Продукция', placeholder='Наименование продукции*')
+          .form-group.required
+            +e.INPUT.input(type='text', name='Продукция', placeholder='Ваш продукт или услуга*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-name.required.has-error
+          .form-group.required.has-error
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-email.required.has-success
+          .form-group.required.has-success
             +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-phone
+          .form-group
             +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон')
             p.help-block.help-block-error Ошибка заполнения поля формы
 
         if item.question
-          .form-group.field-question-name.required.has-success
+          .form-group.required
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-email.required.has-success
-            +e.INPUT.input(type='phone', name='phone', placeholder='Ваш телефон*')
-            p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.required
-          .form-group.field-question-email.required.has-success
-            +e.INPUT.input(type='text', name='country', placeholder='Ваша страна*')
-            p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.required
-          .form-group.field-question-email.required.has-success
-            +e.INPUT.input(type='text', name='Region', placeholder='Ваш регион')
-            p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.required
-          .form-group.field-question-email.required.has-success
             +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
             p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group.required
-          .form-group.field-question-email.required.has-success
-            +e.INPUT.input(type='text', name='Capcha', placeholder='Введите код с картинки')
+            +e.TEXTAREA.textarea(type='text', name='Ваш вопрос', placeholder='Ваш вопрос*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.required
 
         if item.call
-          .form-group.field-question-name.required.has-error
+          .form-group.required.has-error
             +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.field-question-phone.required.has-success
+          .form-group.required.has-success
             +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон*')
             p.help-block.help-block-error Ошибка заполнения поля формы
+          //- .form-group.required
+          //-   +e.time
+          //-     +e.SPAN.time-text Желаемое время звонка c
+          //-     +e.INPUT.input--time(type='time', name='Звонить с')
+          //-     +e.SPAN.time-text до
+          //-     +e.INPUT.input--time(type='time', name='Звонить до')
+          //-   p.help-block.help-block-error Ошибка заполнения поля формы
 
-        .form-group.recaptcha
+        if item.review
+          .form-group.required.has-error
+            +e.INPUT.input(type='text', name='Компания', placeholder='Ваша компания*')
+            p.help-block.help-block-error Ошибка заполнения поля формы
+          .form-group.required.has-success
+            +e.INPUT.input(type='email', name='Email', placeholder='Контактный e-mail*')
+            p.help-block.help-block-error Ошибка заполнения поля формы
+          .form-group.required
+            +e.TEXTAREA.textarea(type='text', name='Ваш отзыв', placeholder='Ваш отзыв*')
+            p.help-block.help-block-error Ошибка заполнения поля формы
+
+        if !item.review
+          .form-group.required
+            +e.SELECT.country-list
+              option Россия
+              option Беларусь
+              option Казахстан
+              option Украина
+              option Азербайджан
+              option Армения
+              option Грузия
+              option Молдавия
+          .form-group.required
+            +e.SELECT.region-list
+              option Санкт-Петербург и Ленинградская область
+              option Москва и Московская область
+              option Новгородская область
+              option Псковская область
+              option Республика Карелия
+              option Мурманская область
+              option Калининградская область
+              option Вологодская область
+              option Тверская область
+        .form-group.required
           +b.captcha
-        +b.BUTTON.btn--form(type='submit') #{item.button}
-        p.help-block.help-block-success #{item.success}
+        .form-group.required
+          +b.BUTTON.btn--form(type='submit') #{item.button}
+          p.help-block.help-block-success #{item.success}
+
+
+
