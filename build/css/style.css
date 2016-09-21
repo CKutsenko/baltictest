@@ -2017,6 +2017,216 @@ __text {
       .rospotreb__block:nth-of-type(3):hover, .rospotreb__block:nth-of-type(3):focus {
         background-image: url(../img/services/rospotreb-hover3.jpg); }
 
+.fire-safety {
+  padding-top: 35px;
+  text-align: center;
+  padding-bottom: 20px; }
+  .fire-safety__title {
+    margin: 0 0 45px;
+    font-size: 18px;
+    background-color: #33bee5;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 7px 0;
+    z-index: 10;
+    position: relative; }
+    .fire-safety__title:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -25%;
+      left: -8px;
+      background-image: url(../img/png-sprite.png);
+      background-position: 0px -200px;
+      width: 58px;
+      height: 58px;
+      background-color: #ffffff;
+      padding: 23px;
+      border-radius: 50%;
+      border: 4px solid #33bee5; }
+  .fire-safety__text {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    margin: 20px 15px; }
+  .fire-safety__block {
+    width: 130px;
+    height: 175px;
+    margin: 10px 20px;
+    text-align: center;
+    transition: all 0.325s ease 0s; }
+    .fire-safety__block:nth-of-type(1) {
+      background-image: url(../img/services/fire-safety1.jpg); }
+      .fire-safety__block:nth-of-type(1):hover, .fire-safety__block:nth-of-type(1):focus {
+        background-image: url(../img/services/fire-safety-hover1.jpg); }
+    .fire-safety__block:nth-of-type(2) {
+      background-image: url(../img/services/fire-safety2.jpg); }
+      .fire-safety__block:nth-of-type(2):hover, .fire-safety__block:nth-of-type(2):focus {
+        background-image: url(../img/services/fire-safety-hover2.jpg); }
+
+.iso {
+  padding-top: 35px;
+  text-align: center;
+  padding-bottom: 20px; }
+  .iso__title {
+    margin: 0 0 45px;
+    font-size: 18px;
+    background-color: #33bee5;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 7px 0;
+    z-index: 10;
+    position: relative; }
+    .iso__title:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -25%;
+      left: -8px;
+      background-image: url(../img/png-sprite.png);
+      background-position: -58px -258px;
+      width: 58px;
+      height: 58px;
+      background-color: #ffffff;
+      padding: 23px;
+      border-radius: 50%;
+      border: 4px solid #33bee5; }
+  .iso__text {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    margin: 20px 15px; }
+  .iso__block {
+    width: 130px;
+    height: 175px;
+    margin: 10px 20px;
+    text-align: center;
+    transition: all 0.325s ease 0s; }
+    .iso__block:nth-of-type(1) {
+      background-image: url(../img/services/iso1.jpg); }
+      .iso__block:nth-of-type(1):hover, .iso__block:nth-of-type(1):focus {
+        background-image: url(../img/services/iso-hover1.jpg); }
+    .iso__block:nth-of-type(2) {
+      background-image: url(../img/services/iso2.jpg); }
+      .iso__block:nth-of-type(2):hover, .iso__block:nth-of-type(2):focus {
+        background-image: url(../img/services/iso-hover2.jpg); }
+    .iso__block:nth-of-type(3) {
+      background-image: url(../img/services/iso3.jpg); }
+      .iso__block:nth-of-type(3):hover, .iso__block:nth-of-type(3):focus {
+        background-image: url(../img/services/iso-hover3.jpg); }
+    .iso__block:nth-of-type(4) {
+      background-image: url(../img/services/iso4.jpg); }
+      .iso__block:nth-of-type(4):hover, .iso__block:nth-of-type(4):focus {
+        background-image: url(../img/services/iso-hover4.jpg); }
+    .iso__block:nth-of-type(5) {
+      background-image: url(../img/services/iso5.jpg); }
+      .iso__block:nth-of-type(5):hover, .iso__block:nth-of-type(5):focus {
+        background-image: url(../img/services/iso-hover5.jpg); }
+    .iso__block:nth-of-type(6) {
+      background-image: url(../img/services/iso6.jpg); }
+      .iso__block:nth-of-type(6):hover, .iso__block:nth-of-type(6):focus {
+        background-image: url(../img/services/iso-hover6.jpg); }
+
+.industrial-safety {
+  padding-top: 35px;
+  text-align: center;
+  padding-bottom: 20px; }
+  .industrial-safety__title {
+    margin: 0 0 45px;
+    font-size: 18px;
+    background-color: #33bee5;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 7px 0;
+    z-index: 10;
+    position: relative; }
+    .industrial-safety__title:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -25%;
+      left: -8px;
+      background-image: url(../img/png-sprite.png);
+      background-position: 0px -258px;
+      width: 58px;
+      height: 58px;
+      background-color: #ffffff;
+      padding: 23px;
+      border-radius: 50%;
+      border: 4px solid #33bee5; }
+  .industrial-safety__text {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    margin: 20px 15px; }
+  .industrial-safety__block {
+    width: 130px;
+    height: 175px;
+    margin: 10px 20px;
+    text-align: center;
+    transition: all 0.325s ease 0s; }
+    .industrial-safety__block:nth-of-type(1) {
+      background-image: url(../img/services/industrial-safety1.jpg); }
+      .industrial-safety__block:nth-of-type(1) .industrial-safety__text {
+        margin: 20px 5px; }
+      .industrial-safety__block:nth-of-type(1):hover, .industrial-safety__block:nth-of-type(1):focus {
+        background-image: url(../img/services/industrial-safety-hover1.jpg); }
+    .industrial-safety__block:nth-of-type(2) {
+      background-image: url(../img/services/industrial-safety2.jpg); }
+      .industrial-safety__block:nth-of-type(2):hover, .industrial-safety__block:nth-of-type(2):focus {
+        background-image: url(../img/services/industrial-safety-hover2.jpg); }
+
+.product-testing {
+  padding-top: 35px;
+  text-align: center;
+  padding-bottom: 20px; }
+  .product-testing__title {
+    margin: 0 0 45px;
+    font-size: 18px;
+    background-color: #33bee5;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 7px 0;
+    z-index: 10;
+    position: relative; }
+    .product-testing__title:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -25%;
+      left: -8px;
+      background-image: url(../img/png-sprite.png);
+      background-position: -200px -122px;
+      width: 58px;
+      height: 58px;
+      background-color: #ffffff;
+      padding: 23px;
+      border-radius: 50%;
+      border: 4px solid #33bee5; }
+  .product-testing__text {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 600;
+    margin: 20px 15px; }
+  .product-testing__block {
+    width: 130px;
+    height: 175px;
+    margin: 10px 20px;
+    text-align: center;
+    transition: all 0.325s ease 0s; }
+    .product-testing__block:nth-of-type(1) {
+      background-image: url(../img/services/product-testing1.jpg); }
+      .product-testing__block:nth-of-type(1):hover, .product-testing__block:nth-of-type(1):focus {
+        background-image: url(../img/services/product-testing-hover1.jpg); }
+    .product-testing__block:nth-of-type(2) {
+      background-image: url(../img/services/product-testing2.jpg); }
+      .product-testing__block:nth-of-type(2):hover, .product-testing__block:nth-of-type(2):focus {
+        background-image: url(../img/services/product-testing-hover2.jpg); }
+    .product-testing__block:nth-of-type(3) {
+      background-image: url(../img/services/product-testing3.jpg); }
+      .product-testing__block:nth-of-type(3):hover, .product-testing__block:nth-of-type(3):focus {
+        background-image: url(../img/services/product-testing-hover3.jpg); }
+
 .content {
   text-align: left; }
   .content__title {
@@ -3017,6 +3227,22 @@ __text {
     -ms-flex-pack: distribute;
     justify-content: space-around; }
   .rospotreb .row {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .fire-safety .row {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .iso .row {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .industrial-safety .row {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+  .product-testing .row {
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
     justify-content: space-around; } }
