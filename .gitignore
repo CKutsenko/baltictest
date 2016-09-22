@@ -1,5 +1,6 @@
 
 build/
+_design/
 .Saved/
 _arc/
 bower_components/

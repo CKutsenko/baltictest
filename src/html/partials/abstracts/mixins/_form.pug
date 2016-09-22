@@ -1,55 +1,54 @@
-- var application = [{name: 'application', id: 'formApplication', title : 'Заказать документ', application: true, button: 'Заказать документ', success: 'Ваша заявка отправлена'}]
-- var question = [{name: 'question', id: 'formQuestion', title : 'Задать вопрос', question: true,  button: 'Спросить', success: 'Ваш вопрос отправлен'}]
-- var call = [{name: 'call', id: 'formCall', title : 'Заказать звонок', call: true, button: 'Заказать звонок', success: 'Ваша заявка отправлена'}]
+- var application = [{name: 'application', id: 'formApplication', title : 'Сэкономьте время! Просто заполните форму', application: true, button: 'Сделать расчет', success: 'Ваша заявка отправлена'}]
+- var question = [{name: 'question', id: 'formQuestion', title : 'Для получения бесплатной коснультации заполните форму', question: true,  button: 'Отправить', success: 'Ваш вопрос отправлен'}]
+- var call = [{name: 'call', id: 'formCall', title : 'Сэкономьте время!', text : 'Просто заполните форму', call: true, button: 'Заказать звонок', success: 'Ваша заявка отправлена'}]
 - var review = [{name: 'review', id: 'formReview', title : 'Оставить отзыв', review: true, button: 'Оставить отзыв', success: 'Отзыв успешно оставлен'}]
 
 
 mixin form(items)
   each item in items
     +b.SECTION(class= 'form--' + item.name)
+      +e.H3.title #{item.title}
+      +e.P.text #{item.text}
       +e.FORM.form(action='', method='', id= item.id)
         //- +e.A.close(href='#') Закрыть
-        +e.H3.title #{item.title}
 
         if item.application
           .form-group.required
-            +e.INPUT.input(type='text', name='Продукция', placeholder='Ваш продукт или услуга*')
+            +e.INPUT.input(type='text', name='Продукция', placeholder='Наименование продукции:*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.required.has-error
-            +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
+          .form-group.required
+            +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя:')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.required.has-success
-            +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
+          .form-group.required
+            +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail:*')
             p.help-block.help-block-error Ошибка заполнения поля формы
           .form-group
-            +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон')
+            +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон:')
             p.help-block.help-block-error Ошибка заполнения поля формы
 
         if item.question
           .form-group.required
-            +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
-            p.help-block.help-block-error Ошибка заполнения поля формы
+            +e.INPUT.input(type='text', name='Продукция', placeholder='Ваше имя')
+            p.help-block.help-block-error Ошибка
           .form-group.required
-            +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail*')
-            p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.required
-            +e.TEXTAREA.textarea(type='text', name='Ваш вопрос', placeholder='Ваш вопрос*')
+            +e.INPUT.input(type='tel', name='Email', placeholder='Ваш телефон')
             p.help-block.help-block-error Ошибка заполнения поля формы
 
+
         if item.call
-          .form-group.required.has-error
-            +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя*')
+          .form-group.required
+            +e.INPUT.input(type='text', name='Продукция', placeholder='Наименование продукции:*')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          .form-group.required.has-success
-            +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон*')
+          .form-group.required
+            +e.INPUT.input(type='text', name='Имя', placeholder='Ваше имя:')
             p.help-block.help-block-error Ошибка заполнения поля формы
-          //- .form-group.required
-          //-   +e.time
-          //-     +e.SPAN.time-text Желаемое время звонка c
-          //-     +e.INPUT.input--time(type='time', name='Звонить с')
-          //-     +e.SPAN.time-text до
-          //-     +e.INPUT.input--time(type='time', name='Звонить до')
-          //-   p.help-block.help-block-error Ошибка заполнения поля формы
+          .form-group.required
+            +e.INPUT.input(type='email', name='Email', placeholder='Ваш e-mail:*')
+            p.help-block.help-block-error Ошибка заполнения поля формы
+          .form-group
+            +e.INPUT.input(type='tel', name='Телефон', placeholder='Контактный телефон:')
+            p.help-block.help-block-error Ошибка заполнения поля формы
+
 
         if item.review
           .form-group.required.has-error
@@ -65,6 +64,7 @@ mixin form(items)
         if !item.review
           .form-group.required
             +e.SELECT.country-list
+              option Страна*
               option Россия
               option Беларусь
               option Казахстан
@@ -75,6 +75,7 @@ mixin form(items)
               option Молдавия
           .form-group.required
             +e.SELECT.region-list
+              option Регион:*
               option Санкт-Петербург и Ленинградская область
               option Москва и Московская область
               option Новгородская область
@@ -84,8 +85,6 @@ mixin form(items)
               option Калининградская область
               option Вологодская область
               option Тверская область
-        .form-group.required
-          +b.captcha
         .form-group.required
           +b.BUTTON.btn--form(type='submit') #{item.button}
           p.help-block.help-block-success #{item.success}

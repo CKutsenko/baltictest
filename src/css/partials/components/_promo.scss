@@ -3,6 +3,17 @@
   padding-top: 30px;
   padding-bottom: 30px;
 
+  .row {
+   @include mq($from:xs, $until:lg){
+      .promo-order{
+        order: 1;
+      }
+      .form-order {
+        order:2;
+      }
+    }
+  }
+
   &__title {
     text-transform: uppercase;
     color: $light-blue;
@@ -18,6 +29,7 @@
    @include mq($from:xs, $until:lg){
     text-align: center;
     text-indent: 0px;
-    font-size: $font-size - 4px;   }
+    font-size: $font-size - 4px;
+    }
   }
 }

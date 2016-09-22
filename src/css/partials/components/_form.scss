@@ -1,43 +1,93 @@
 .form{
   text-align: center;
-  background-color: $dark-blue;
-  border-radius: 15px;
   width: 100%;
-  color: $text-color-white;
+  border: 1px solid $light-blue;
 
-  // @include mq($from:xs, $until:sm){
-  //   padding: 0 20px;
-  // }
-
-  &__close{
-    position: absolute;
-    top: 0;
-    right: 5px;
-    display: inline-block;
-    transform: translateY(-135%);
+  &__form {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap:  wrap;
   }
-  &__title{
-    margin: 0 0 20px;
-    border-radius: 15px 15px 0 0;
-    padding: 25px 0 25px;
-    background-color: $light-blue;
-    font-weight: $regular;
+
+  &__title {
+    margin: 20px;
+    color: $red;
+    font-weight: $bold;
     text-transform: uppercase;
     font-size: $font-size-subtitle;
   }
-  .form-group{
-    margin-left:30px;
-    margin-right: 30px;
+}
+
+  .form--application {
+    margin-top: 20px;
+
+    p{
+      display: none;
+    }
+
+    .form-group{
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 7px;
+    @include mq($from:xs, $until:md){
+        width: 100%;
+    }
+
+    &:nth-of-type(7) {
+      text-align: center;
+      padding-bottom: 10px;
+      padding-right: 0;
+      width: 50%;
+      margin-left: 25%;
+       @include mq($from:xs, $until:md){
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+    &:nth-of-type(5) select,
+    &:nth-of-type(6) select{
+      text-align: left;
+      font-size: $base-font-size;
+      padding: 8px 20px;
+      background-color: $light-grey;
+      border: none;
+      width: 100%;
+      padding-left: 10px;
+    }
+
+    .btn {
+      display: block;
+      background-color: $red;
+      border: none;
+      color: $white;
+      font-weight: $bold;
+      text-transform: uppercase;
+      padding: 8px 0;
+      width: 95%;
+      outline: none;
+      @include transition();
+      &:hover {
+        width: calc(100% + 10px);
+      }
+      &:active {
+        background-color: $light-grey;
+        color: $red;
+      }
+    }
   }
-  &__input{
-    color: $dark-blue;
-    background-color: $body-bg;
-    font-size: $font-size-small;
-    padding: 8px 15px;
+
+
+  .form__input {
+    text-align: left;
+    font-size: $base-font-size;
     width: 100%;
-    border-radius: 25px;
-    border: 1px solid $grey;
-    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8), inset 0.5px 0.866px 5px 0px rgba(0, 0, 0, 0.15);
+    background-color: $light-grey;
+    border: none;
+    padding: 10px 15px;
+
     &::-webkit-input-placeholder{
       color: $dark-blue;
     }
@@ -55,16 +105,84 @@
       margin: 0 5px;
     }
   }
-  &__textarea{
-    color: $dark-blue;
-    background-color: $body-bg;
-    font-size: $font-size-small;
-    padding: 8px 15px;
+}
+
+  .form--question {
+
+    p {
+      display: none;
+    }
+
+    .form-group{
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 7px;
+    @include mq($from:sm, $until:md){
+    width: 50%;
+    }
+    @include mq($from:xs, $until:sm){
     width: 100%;
-    border-radius: 15px;
-    border: 1px solid $grey;
-    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8), inset 0.5px 0.866px 5px 0px rgba(0, 0, 0, 0.15);
-    height: 150px;
+    }
+    &:nth-of-type(5) {
+      margin-left: 25%;
+      width: 52%;
+      text-align: center;
+      padding-bottom: 10px;
+      padding-right: 0;
+
+       @include mq($from:xs, $until:md){
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+    &:nth-of-type(3) select,
+    &:nth-of-type(4) select{
+      text-align: left;
+      font-size: $base-font-size;
+      padding: 8px 55px;
+      background-color: $light-grey;
+      border: none;
+      width: 100%;
+      padding-left: 10px;
+    }
+     &:nth-of-type(4) select {
+      max-width: 92%;
+      margin-right: 20px;
+       @include mq($from:xs, $until:md){
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+    .btn {
+      display: block;
+      background-color: $red;
+      border: none;
+      color: $white;
+      font-weight: $bold;
+      text-decoration: underline;
+      text-transform: uppercase;
+      padding: 8px 0;
+      width: 95%;
+      outline: none;
+      @include transition();
+      &:hover {
+        width: calc(100% + 10px);
+      }
+      &:active {
+        background-color: $light-grey;
+        color: $red;
+      }
+    }
+  }
+
+
+  .form__input {
+    text-align: left;
+    font-size: $base-font-size;
+    width: 100%;
+    background-color: $light-grey;
+    border: none;
+    padding: 10px 15px;
 
     &::-webkit-input-placeholder{
       color: $dark-blue;
@@ -78,28 +196,152 @@
     &:focus::placeholder{
       color: transparent;
     }
-  }
-  &__time-text{
-    font-size: $font-size-small;
-  }
-}
-
-.recaptcha{
-  @include mq($from:xs, $until:sm){
-    position: relative;
-    top: -5px;
-    left: -35px;
-    transform: scale(0.65);
+    &--time{
+      width: 100px;
+      margin: 0 5px;
+    }
   }
 }
 
-.captcha{
-  background-color: $body-bg;
-  background-image: url(../img/captcha.png);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  width: 304px;
-  height: 78px;
-  margin: 0 auto 30px;
-  text-align: center;
+
+
+  .form--call {
+    margin: 35px 20px 10px;
+    max-width:90%;
+
+    .form__title {
+    margin: 10px;
+   }
+    .form__text {
+    margin: 10px;
+    font-size:$font-size;
+   }
+    .form-group{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 7px;
+    @include mq($from:sm, $until:lg){
+        width: 50%;
+    }
+
+    &:nth-of-type(7) {
+      text-align: center;
+      padding-bottom: 10px;
+      padding-right: 0;
+       @include mq($from:xs, $until:sm){
+        width: 100%;
+        margin-left: 0;
+      }
+       @include mq($from:sm, $until:lg){
+        width: 50%;
+        margin-left: 25%;
+      }
+    }
+    &:nth-of-type(5) select,
+    &:nth-of-type(6) select{
+      text-align: left;
+      font-size: $base-font-size;
+      padding: 8px 20px;
+      background-color: $light-grey;
+      border: none;
+      width: 100%;
+      padding-left: 10px;
+    }
+
+    .btn {
+      display: block;
+      background-color: $red;
+      border: none;
+      color: $white;
+      font-weight: $bold;
+      text-transform: uppercase;
+      padding: 8px 0;
+      width: 95%;
+      outline: none;
+      @include transition();
+      &:hover {
+        width: calc(95% + 10px);
+      }
+      &:active {
+        background-color: $light-grey;
+        color: $red;
+      }
+    }
+  }
+
+
+  .form__input {
+    text-align: left;
+    font-size: $base-font-size;
+    width: 100%;
+    background-color: $light-grey;
+    border: none;
+    padding: 10px 15px;
+
+    &::-webkit-input-placeholder{
+      color: $dark-blue;
+    }
+    &::placeholder{
+      color: $dark-blue;
+    }
+    &:focus::-webkit-input-placeholder{
+      color: transparent;
+    }
+    &:focus::placeholder{
+      color: transparent;
+    }
+    &--time{
+      width: 100px;
+      margin: 0 5px;
+    }
+  }
 }
+
+  // &__textarea{
+  //   color: $dark-blue;
+  //   background-color: $body-bg;
+  //   font-size: $font-size-small;
+  //   padding: 8px 15px;
+  //   width: 100%;
+  //   border-radius: 15px;
+  //   border: 1px solid $grey;
+  //   box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8), inset 0.5px 0.866px 5px 0px rgba(0, 0, 0, 0.15);
+  //   height: 150px;
+
+  //   &::-webkit-input-placeholder{
+  //     color: $dark-blue;
+  //   }
+  //   &::placeholder{
+  //     color: $dark-blue;
+  //   }
+  //   &:focus::-webkit-input-placeholder{
+  //     color: transparent;
+  //   }
+  //   &:focus::placeholder{
+  //     color: transparent;
+  //   }
+  // }
+  // &__time-text{
+  //   font-size: $font-size-small;
+  // }
+
+
+// .recaptcha{
+//   @include mq($from:xs, $until:sm){
+//     position: relative;
+//     top: -5px;
+//     left: -35px;
+//     transform: scale(0.65);
+//   }
+// }
+
+// .captcha{
+//   background-color: $body-bg;
+//   background-image: url(../img/captcha.png);
+//   background-repeat: no-repeat;
+//   background-size: 100% 100%;
+//   width: 304px;
+//   height: 78px;
+//   margin: 0 auto 30px;
+//   text-align: center;
+// }

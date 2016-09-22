@@ -1,11 +1,15 @@
+include ../abstracts/mixins/_form.pug
+include ../abstracts/mixins/_sidebar-link.pug
 include ../abstracts/bemto/bemto.pug
 
 // Sidebar
 +b.ASIDE.sidebar
-  +e.form-application
-    include form--application.pug
-  include location.pug
-  +b.A.btn--vk(href="#", data-form="application") ВКонтакте
+  +form(call)
+  +sidebarLink("Подробно о сертификации Вашей продукции")
+  +sidebarLink("Проверка подлинности документов")
+  +sidebarLink("Дополнительная информация")
+
+
 
 
 

@@ -4,9 +4,39 @@
 
 jQuery(document).ready(function($){
 
+  //  / одинаковая высота у sidebar-link /
+  //    var promoTextMaxHeight = 0;
+  // var promoTextItem = $(".sidebar-link");
+  // $(promoTextItem).each(function(){
+  //  if ( $(this).height() > promoTextMaxHeight) {
+  //   promoTextMaxHeight = $(this).height();
+  //  }
+  // });
+  // $(promoTextItem).height(promoTextMaxHeight);
+
    / одинаковая высота у services__type /
   var promoTextMaxHeight = 0;
   var promoTextItem = $(".services__type");
+  $(promoTextItem).each(function(){
+   if ( $(this).height() > promoTextMaxHeight) {
+    promoTextMaxHeight = $(this).height();
+   }
+  });
+  $(promoTextItem).height(promoTextMaxHeight);
+
+     / одинаковая высота у interesting-article__title /
+  var promoTextMaxHeight = 0;
+  var promoTextItem = $(".interesting-article__title");
+  $(promoTextItem).each(function(){
+   if ( $(this).height() > promoTextMaxHeight) {
+    promoTextMaxHeight = $(this).height();
+   }
+  });
+  $(promoTextItem).height(promoTextMaxHeight);
+
+  / одинаковая высота у interesting-article__text /
+  var promoTextMaxHeight = 0;
+  var promoTextItem = $(".interesting-article__text");
   $(promoTextItem).each(function(){
    if ( $(this).height() > promoTextMaxHeight) {
     promoTextMaxHeight = $(this).height();
