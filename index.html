@@ -111,10 +111,62 @@
             <section class="promo">
               <div class="container">
                 <div class="row">
-                  <div class="col-xs-12 col-lg-8">
-                    <p class="promo__form">тут должна быть форма</p>
+                  <div class="col-xs-12 col-lg-8 form-order">
+                    <section class="form form--application">
+                      <h3 class="form__title">Сэкономьте время! Просто заполните форму</h3>
+                      <p class="form__text"></p>
+                      <form class="form__form" action="" method="" id="formApplication">
+                        <div class="form-group required">
+                          <input class="form__input" type="text" name="Продукция" placeholder="Наименование продукции:*" />
+                          <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                        </div>
+                        <div class="form-group required">
+                          <input class="form__input" type="text" name="Имя" placeholder="Ваше имя:" />
+                          <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                        </div>
+                        <div class="form-group required">
+                          <input class="form__input" type="email" name="Email" placeholder="Ваш e-mail:*" />
+                          <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                        </div>
+                        <div class="form-group">
+                          <input class="form__input" type="tel" name="Телефон" placeholder="Контактный телефон:" />
+                          <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                        </div>
+                        <div class="form-group required">
+                          <select class="form__country-list">
+                            <option>Страна*</option>
+                            <option>Россия</option>
+                            <option>Беларусь</option>
+                            <option>Казахстан</option>
+                            <option>Украина</option>
+                            <option>Азербайджан</option>
+                            <option>Армения</option>
+                            <option>Грузия</option>
+                            <option>Молдавия</option>
+                          </select>
+                        </div>
+                        <div class="form-group required">
+                          <select class="form__region-list">
+                            <option>Регион:*</option>
+                            <option>Санкт-Петербург и Ленинградская область</option>
+                            <option>Москва и Московская область</option>
+                            <option>Новгородская область</option>
+                            <option>Псковская область</option>
+                            <option>Республика Карелия</option>
+                            <option>Мурманская область</option>
+                            <option>Калининградская область</option>
+                            <option>Вологодская область</option>
+                            <option>Тверская область</option>
+                          </select>
+                        </div>
+                        <div class="form-group required">
+                          <button class="btn btn--form" type="submit">Сделать расчет</button>
+                          <p class="help-block help-block-success">Ваша заявка отправлена</p>
+                        </div>
+                      </form>
+                    </section>
                   </div>
-                  <div class="col-xs-12 col-lg-4">
+                  <div class="col-xs-12 col-lg-4 promo-order">
                     <h2 class="promo__title">Немного о компании</h2>
                     <p class="promo__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Свой что буквоград жаренные, от всех напоивший.</p>
                     <p class="promo__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Семь свой реторический родного запятой домах то, возвращайся текста языкового единственное сбить знаках они своих вопрос буквоград бросил за. Собрал
@@ -231,6 +283,51 @@
             <section class="services-form">
               <h2 class="services-form__question">Вы не знаете какой документ Вам нужен?</h2>
               <p class="services-form__consult">закажите бесплтаную консультацию по телефону</p>
+              <section class="form form--question">
+                <h3 class="form__title">Для получения бесплатной коснультации заполните форму</h3>
+                <p class="form__text"></p>
+                <form class="form__form" action="" method="" id="formQuestion">
+                  <div class="form-group required">
+                    <input class="form__input" type="text" name="Продукция" placeholder="Ваше имя" />
+                    <p class="help-block help-block-error">Ошибка</p>
+                  </div>
+                  <div class="form-group required">
+                    <input class="form__input" type="tel" name="Email" placeholder="Ваш телефон" />
+                    <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                  </div>
+                  <div class="form-group required">
+                    <select class="form__country-list">
+                      <option>Страна*</option>
+                      <option>Россия</option>
+                      <option>Беларусь</option>
+                      <option>Казахстан</option>
+                      <option>Украина</option>
+                      <option>Азербайджан</option>
+                      <option>Армения</option>
+                      <option>Грузия</option>
+                      <option>Молдавия</option>
+                    </select>
+                  </div>
+                  <div class="form-group required">
+                    <select class="form__region-list">
+                      <option>Регион:*</option>
+                      <option>Санкт-Петербург и Ленинградская область</option>
+                      <option>Москва и Московская область</option>
+                      <option>Новгородская область</option>
+                      <option>Псковская область</option>
+                      <option>Республика Карелия</option>
+                      <option>Мурманская область</option>
+                      <option>Калининградская область</option>
+                      <option>Вологодская область</option>
+                      <option>Тверская область</option>
+                    </select>
+                  </div>
+                  <div class="form-group required">
+                    <button class="btn btn--form" type="submit">Отправить</button>
+                    <p class="help-block help-block-success">Ваш вопрос отправлен</p>
+                  </div>
+                </form>
+              </section>
             </section>
           </div>
         </div>
