@@ -75,6 +75,7 @@ h4{
     font-size: $font-size-h1;
     font-weight: $bold;
     line-height: 42px;
+    padding-left: 15px;
   }
   @include mq($from:xs, $until:xl){
     min-width: 100%;

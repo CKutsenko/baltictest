@@ -1,34 +1,88 @@
-.page{
-  text-align: left;
-  padding: 20px;
+.page-inner {
 
-  &__form{
-    width: 100%;
-    max-width: 500px;
-    margin: 20px auto;
-    // padding: 20px 0;
-          
-    .form__close{
-      display: none;
+  &__title {
+    font-size: $font-size +6px;
+    font-weight: $bold;
+    color: #4d4d4d;
+    line-height: 28px;
+    padding-bottom: 30px;
+  }
+}
+
+.page-call-btn {
+  float: left;
+  border: 1px solid $light-blue;
+  max-width: 180px;
+  background-color: $light-grey;
+  text-align: center;
+  margin: 0 15px 15px;
+    @include mq($from:xs, $until:sm){
+      min-width: 90%;
     }
-    .form-group{
-      display: inline-block;
-      vertical-align: top;
-      width: calc(100% - 60px);
+  &__btn {
+    display: block;
+    background-color: $red;
+    color: $white;
+    font-weight: $semibold;
+    margin: 15px;
+    padding: 8px 10px;
+    @include transition();
+    &:hover {
+      transform: scaleX(1.04);
     }
-    .form-group.recaptcha{
-      margin: 0;
-      width: 100%;
-    }    
-    .form__input--time{
-      padding: 8px 5px 8px 15px;
-      width: 80px;
+    &:active {
+      background-color: $light-grey;
+      color: $red;
     }
-    .form__time-text{
-      display: inline-block;
-      vertical-align: middle;
-      max-width: 120px;
+  }
+
+  &__text {
+    margin-bottom: 5px;
+  }
+}
+
+.page-text-wrapper {
+
+  &__title {
+    margin-top: 0;
+    font-size: $font-size +2px;
+    font-weight: $bold;
+    line-height: 22px;
+  }
+
+  &__text {
+    line-height: 22px;
+    margin: 0;
+  }
+
+  &__quote {
+    background-color: $light-grey;
+    border-left: 2px solid $light-blue;
+    font-style: italic;
+    color: #595959;
+
+    blockquote {
+      margin-bottom: 8px;
     }
+
+    p {
+      margin-top: 8px;
+      text-align: right;
+      padding-right: 45px;
+      padding-bottom: 5px;
+    }
+  }
+
+  ol, ul {
+    margin: 0;
+  }
+
+  &__page-list-ol {
+    list-style-type: upper-alpha;
+  }
+
+  &__page-list-ol--level2 {
+    list-style-type: lower-alpha;
   }
 }
 
