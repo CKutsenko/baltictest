@@ -134,29 +134,21 @@
 }
 
 .search{
-  margin-top: -5px;
-  position: relative;
+
+  padding-top: 10px;
   &__form{
-    @include mq($from:md, $until:xl){
-      position: absolute;
-      right: 0;
-    }
-    @include mq($from:xs, $until:md){
-      position: relative;
-      bottom: 0;
-      right: 50%;
-      transform: translateX(50%);
-    }
+    display: none;
   }
   &__input{
-    width: 380px;
+    width: 320px;
     font-size: $font-size-small;
+    color: #000;
     padding: 10px 15px;
     border: none;
     border-radius: 20px;
     box-shadow: inset 0px 2px 5px 0px rgba(0, 0, 0, 0.36);
     @include mq($from:xs, $until:xl){
-      width: 300px;
+      width: 280px;
     }
     &:hover, &:focus{
       outline: none;

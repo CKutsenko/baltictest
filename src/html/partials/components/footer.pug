@@ -18,6 +18,8 @@ include ../abstracts/bemto/bemto.pug
           +e.item
             +e.A.link(href="page-contacts.html") Контакты
           +b.search
+            +e.form
+              +e.INPUT.input(type='text', name='Поиск', placeholder='поиск')
             +e.A.icon(href="javascript:void(0);")
   .footer-socials
     .container
@@ -32,7 +34,7 @@ include ../abstracts/bemto/bemto.pug
                     img(src="img/soc-fb.png", alt="fb", title="facebook")
                 +e.LI.item
                   +e.A.link(href="https://vk.com" target="_blank")
-                  img(src="img/soc-vk.png", alt="vk", title="vkontakte")
+                    img(src="img/soc-vk.png", alt="vk", title="vkontakte")
                 +e.LI.item
                   +e.A.link(href="https://instagram.com/" target="_blank")
                     img(src="img/soc-insta.png", alt="instagram", title="instagram")

@@ -1,33 +1,36 @@
-.services__item {
-  @include transition();
-}
-
 .services__item:hover .services__type {
-  color: $white;
   background-color: $red;
 }
 
-.services__item:hover .services__tringle{
+.services__item:hover .services__triangle{
   background-color: $red;
 }
+
+.services__type,
+.services__triangle {
+    -moz-transition: all .7s ease-in;
+    /* WebKit */
+    -webkit-transition: all .7s ease-in;
+    /* Opera */
+    -o-transition: all .7s ease-in;
+    /* Standard */
+    transition: all .7s ease-in;
+}
+
 
 .services{
   text-align: center;
 
-  &__item {
-  @include transition();
+  // &__item {
+  // @include transition();
 
-  &:hover {
-    .services__wrapper {
-        color: $white;
-      }
-
-       &.services__tringle,
-       &.services__type {
-     background-color: $red;
-      }
-    }
-  }
+  // &:hover {
+  //    &.services__tringle,
+  //    &.services__type {
+  //       background-color: $red;
+  //     }
+  //   }
+  // }
 
   &__item:nth-of-type(1){
     .services__wrapper:after {
@@ -119,7 +122,7 @@
     position: relative;
     overflow: hidden;
     color: $white;
-    transition: 1s ease;
+    // transition: 1s ease;
 
     // &:hover {
     //   color: $white;
@@ -154,7 +157,7 @@
     }
   }
 
-  &__tringle {
+  &__triangle {
     width: 150px;
     height: 150px;
     background-color: $light-blue;
@@ -165,7 +168,7 @@
     z-index: 100;
   }
 
-  &__tringle_2 {
+  &__triangle_2 {
     width: 160px;
     height: 160px;
     background-color: rgba(255, 255, 255, 0.4);

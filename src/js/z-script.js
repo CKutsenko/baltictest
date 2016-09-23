@@ -4,15 +4,11 @@
 
 jQuery(document).ready(function($){
 
-  //  / одинаковая высота у sidebar-link /
-  //    var promoTextMaxHeight = 0;
-  // var promoTextItem = $(".sidebar-link");
-  // $(promoTextItem).each(function(){
-  //  if ( $(this).height() > promoTextMaxHeight) {
-  //   promoTextMaxHeight = $(this).height();
-  //  }
-  // });
-  // $(promoTextItem).height(promoTextMaxHeight);
+  $('.search__icon').click(function(e){
+   e.preventDefault();
+   $('.search__form').toggle();
+  });
+
 
    / одинаковая высота у services__type /
   var promoTextMaxHeight = 0;
@@ -152,7 +148,9 @@ $(document).ready(function () {
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
-    arrows: false
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000
   });
 
   /* Review-section in the modal window */
