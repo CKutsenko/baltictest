@@ -9,6 +9,14 @@ jQuery(document).ready(function($){
    $('.search__form').toggle();
   });
 
+  $(window).bind('scroll', function () {
+    if ($(window).scrollTop() > 100) {
+        $('.nav-bgr').addClass('fixed');
+    } else {
+        $('.nav-bgr').removeClass('fixed');
+    }
+});
+
 
    / одинаковая высота у services__type /
   var promoTextMaxHeight = 0;

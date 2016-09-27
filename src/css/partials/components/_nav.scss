@@ -200,3 +200,15 @@
 .hamburger--close{
   @include sprite($s-hamburger-close);
 }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(51,190,229, 0.9);
+
+  .nav {
+    margin-top: 0;
+  }
+}

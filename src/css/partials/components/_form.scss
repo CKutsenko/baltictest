@@ -412,6 +412,117 @@
   }
 }
 
+.form--questionheader {
+  margin: 35px 20px 10px;
+  max-width:90%;
+  background-color: $white;
+
+  .form__title {
+    margin: 10px;
+  }
+  .form__text {
+    margin: 10px;
+    font-size:$font-size;
+  }
+  .form-group{
+    width: 100%;
+    padding: 10px;
+    padding-left: 10px;
+    margin-bottom: 7px;
+    @include mq($from:sm, $until:lg){
+      width: 50%;
+    }
+
+    &:nth-of-type(7) {
+      text-align: center;
+      padding-bottom: 10px;
+      padding-right: 0;
+      @include mq($from:xs, $until:sm){
+        width: 100%;
+        margin-left: 0;
+      }
+      @include mq($from:sm, $until:lg){
+        width: 50%;
+        margin-left: 25%;
+      }
+    }
+
+     textarea {
+      text-align: left;
+      font-size: $base-font-size;
+      padding: 8px 20px;
+      background-color: $light-grey;
+      border: none;
+      width: 100%;
+      padding-left: 10px;
+      color: $black;
+    }
+
+    &:nth-of-type(5) select,
+    &:nth-of-type(6) select{
+      text-align: left;
+      font-size: $base-font-size;
+      padding: 8px 20px;
+      background-color: $light-grey;
+      border: none;
+      width: 100%;
+      padding-left: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: $red;
+      border: none;
+      color: $white;
+      font-weight: $bold;
+      text-transform: uppercase;
+      padding: 8px 0px;
+      width: 95%;
+      outline: none;
+      border-right: 5px solid $white;
+      border-left: 5px solid $white;
+      @include transition();
+      &:hover {
+        border-right: 5px solid $red;
+        border-left: 5px solid $red;
+      }
+      &:active {
+        background-color: $light-grey;
+        color: $red;
+        border-right: 5px solid $white;
+        border-left: 5px solid $white;
+      }
+    }
+  }
+
+
+  .form__input {
+    text-align: left;
+    font-size: $base-font-size;
+    width: 100%;
+    background-color: $light-grey;
+    border: none;
+    padding: 10px 15px;
+
+    &::-webkit-input-placeholder{
+      color: $dark-blue;
+    }
+    &::placeholder{
+      color: $dark-blue;
+    }
+    &:focus::-webkit-input-placeholder{
+      color: transparent;
+    }
+    &:focus::placeholder{
+      color: transparent;
+    }
+    &--time{
+      width: 100px;
+      margin: 0 5px;
+    }
+  }
+}
+
 // &__textarea{
   //   color: $dark-blue;
   //   background-color: $body-bg;
