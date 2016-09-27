@@ -73,15 +73,15 @@ $(document).ready(function () {
 /* Аккордеон*/
 // ACCORDION
 
-  // jQuery('.sidebar .widget_nav_menu ul.menu').slideUp();
-  // jQuery('.sidebar .widget_nav_menu ul.menu:has(li.current-menu-item)').slideDown();
-  // jQuery('.sidebar .widget_nav_menu h2').click(function() {
-  //   if (jQuery('#'+jQuery(this).parent().attr('id')+' ul.menu').css('display') == 'block')
-  //   {
-  //     jQuery('#' + jQuery(this).parent().attr('id')+' ul.menu').slideUp();
-  //   }
-  //   else jQuery('#' + jQuery(this).parent().attr('id')+' ul.menu').slideDown();
-  // });
+  $('.sidebar-link__btn').click(function(e){
+    e.preventDefault();
+    if($(this).next('.sidebar-link__accordion').is(":visible")) {
+      $(this).next('.sidebar-link__accordion').hide();
+    } else {
+      $(this).closest('.sidebar').find('.sidebar-link__accordion').hide();
+      $(this).next('.sidebar-link__accordion').show();
+    }
+  });
 
 
 
