@@ -1,6 +1,6 @@
 - var application = [{name: 'application', id: 'formApplication', title : 'Сэкономьте время! Просто заполните форму', application: true, button: 'Сделать расчет', success: 'Ваша заявка отправлена'}]
 - var question = [{name: 'question', id: 'formQuestion', title : 'Для получения бесплатной коснультации заполните форму', question: true,  button: 'Отправить', success: 'Ваш вопрос отправлен'}]
-- var call = [{name: 'call', id: 'formCall', title : 'Сэкономьте время!', text : 'Просто заполните форму', call: true, button: 'Заказать звонок', success: 'Ваша заявка отправлена'}]
+- var call = [{name: 'call', id: 'formCall', title : 'Сэкономьте время!', text : 'Просто заполните форму', call: true, button: 'Заказать сертификат', success: 'Ваша заявка отправлена'}]
 - var review = [{name: 'review', id: 'formReview', title : 'Оставить отзыв', review: true, button: 'Оставить отзыв', success: 'Отзыв успешно оставлен'}]
 
 
@@ -10,7 +10,6 @@ mixin form(items)
       +e.H3.title #{item.title}
       +e.P.text #{item.text}
       +e.FORM.form(action='', method='', id= item.id)
-        //- +e.A.close(href='#') Закрыть
 
         if item.application
           .form-group.required

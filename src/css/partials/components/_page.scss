@@ -19,6 +19,31 @@
     @include mq($from:xs, $until:sm){
       min-width: 90%;
     }
+  &__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  display: none;
+  }
+
+  &__form {
+    display: none;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
   &__btn {
     display: block;
     background-color: $red;
@@ -26,15 +51,20 @@
     font-weight: $semibold;
     margin: 15px;
     padding: 8px 10px;
-    @include transition();
-    &:hover {
-      transform: scaleX(1.04);
+      border-right: 5px solid $white;
+      border-left: 5px solid $white;
+      @include transition();
+      &:hover {
+        border-right: 5px solid $red;
+        border-left: 5px solid $red;
+      }
+      &:active {
+        background-color: $light-grey;
+        color: $red;
+        border-right: 5px solid $white;
+        border-left: 5px solid $white;
+      }
     }
-    &:active {
-      background-color: $light-grey;
-      color: $red;
-    }
-  }
 
   &__text {
     margin-bottom: 5px;

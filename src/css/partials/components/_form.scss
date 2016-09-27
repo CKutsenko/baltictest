@@ -21,19 +21,19 @@
   }
 }
 
-  .form--application {
-    margin-top: 20px;
+.form--application {
+  margin-top: 20px;
 
-    p{
-      display: none;
-    }
+  p{
+    display: none;
+  }
 
-    .form-group{
+  .form-group{
     width: 50%;
     padding: 10px;
     margin-bottom: 7px;
     @include mq($from:xs, $until:md){
-        width: 100%;
+      width: 100%;
     }
 
     &:nth-of-type(7) {
@@ -42,7 +42,7 @@
       padding-right: 0;
       width: 50%;
       margin-left: 25%;
-       @include mq($from:xs, $until:md){
+      @include mq($from:xs, $until:md){
         width: 100%;
         margin-left: 0;
       }
@@ -68,13 +68,18 @@
       padding: 8px 0;
       width: 95%;
       outline: none;
+      border-right: 5px solid $white;
+      border-left: 5px solid $white;
       @include transition();
       &:hover {
-        transform: scaleX(1.04);
+        border-right: 5px solid $red;
+        border-left: 5px solid $red;
       }
       &:active {
         background-color: $light-grey;
         color: $red;
+        border-right: 5px solid $white;
+        border-left: 5px solid $white;
       }
     }
   }
@@ -107,21 +112,23 @@
   }
 }
 
-  .form--question {
+.form--question {
+  background-color: $white;
+  z-index: 100;
 
-    p {
-      display: none;
-    }
+  p {
+    display: none;
+  }
 
-    .form-group{
+  .form-group{
     width: 25%;
     padding: 10px;
     margin-bottom: 7px;
     @include mq($from:sm, $until:md){
-    width: 50%;
+      width: 50%;
     }
     @include mq($from:xs, $until:sm){
-    width: 100%;
+      width: 100%;
     }
     &:nth-of-type(5) {
       margin-left: 25%;
@@ -130,7 +137,7 @@
       padding-bottom: 10px;
       padding-right: 0;
 
-       @include mq($from:xs, $until:md){
+      @include mq($from:xs, $until:md){
         width: 100%;
         margin-left: 0;
       }
@@ -145,10 +152,10 @@
       width: 100%;
       padding-left: 10px;
     }
-     &:nth-of-type(4) select {
+    &:nth-of-type(4) select {
       max-width: 92%;
       margin-right: 20px;
-       @include mq($from:xs, $until:md){
+      @include mq($from:xs, $until:md){
         width: 100%;
         margin-right: 0;
       }
@@ -164,13 +171,18 @@
       padding: 8px 0;
       width: 95%;
       outline: none;
+      border-right: 5px solid $white;
+      border-left: 5px solid $white;
       @include transition();
       &:hover {
-        transform: scaleX(1.04);
+        border-right: 5px solid $red;
+        border-left: 5px solid $red;
       }
       &:active {
         background-color: $light-grey;
         color: $red;
+        border-right: 5px solid $white;
+        border-left: 5px solid $white;
       }
     }
   }
@@ -203,37 +215,35 @@
   }
 }
 
+.form--certificate {
+  margin: 35px 20px 10px;
+  max-width:90%;
 
-
-  .form--call {
-    margin: 35px 20px 10px;
-    max-width:90%;
-
-    .form__title {
+  .form__title {
     margin: 10px;
-   }
-    .form__text {
+  }
+  .form__text {
     margin: 10px;
     font-size:$font-size;
-   }
-    .form-group{
+  }
+  .form-group{
     width: 100%;
     padding: 10px;
     padding-left: 10px;
     margin-bottom: 7px;
     @include mq($from:sm, $until:lg){
-        width: 50%;
+      width: 50%;
     }
 
     &:nth-of-type(7) {
       text-align: center;
       padding-bottom: 10px;
       padding-right: 0;
-       @include mq($from:xs, $until:sm){
+      @include mq($from:xs, $until:sm){
         width: 100%;
         margin-left: 0;
       }
-       @include mq($from:sm, $until:lg){
+      @include mq($from:sm, $until:lg){
         width: 50%;
         margin-left: 25%;
       }
@@ -259,13 +269,18 @@
       padding: 8px 0px;
       width: 95%;
       outline: none;
+      border-right: 5px solid $white;
+      border-left: 5px solid $white;
       @include transition();
       &:hover {
-        transform: scaleX(1.04);
+        border-right: 5px solid $red;
+        border-left: 5px solid $red;
       }
       &:active {
         background-color: $light-grey;
         color: $red;
+        border-right: 5px solid $white;
+        border-left: 5px solid $white;
       }
     }
   }
@@ -298,7 +313,106 @@
   }
 }
 
-  // &__textarea{
+.form--call {
+  margin: 35px 20px 10px;
+  max-width:90%;
+  background-color: $white;
+
+  .form__title {
+    margin: 10px;
+  }
+  .form__text {
+    margin: 10px;
+    font-size:$font-size;
+  }
+  .form-group{
+    width: 100%;
+    padding: 10px;
+    padding-left: 10px;
+    margin-bottom: 7px;
+    @include mq($from:sm, $until:lg){
+      width: 50%;
+    }
+
+    &:nth-of-type(7) {
+      text-align: center;
+      padding-bottom: 10px;
+      padding-right: 0;
+      @include mq($from:xs, $until:sm){
+        width: 100%;
+        margin-left: 0;
+      }
+      @include mq($from:sm, $until:lg){
+        width: 50%;
+        margin-left: 25%;
+      }
+    }
+    &:nth-of-type(5) select,
+    &:nth-of-type(6) select{
+      text-align: left;
+      font-size: $base-font-size;
+      padding: 8px 20px;
+      background-color: $light-grey;
+      border: none;
+      width: 100%;
+      padding-left: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: $red;
+      border: none;
+      color: $white;
+      font-weight: $bold;
+      text-transform: uppercase;
+      padding: 8px 0px;
+      width: 95%;
+      outline: none;
+      border-right: 5px solid $white;
+      border-left: 5px solid $white;
+      @include transition();
+      &:hover {
+        border-right: 5px solid $red;
+        border-left: 5px solid $red;
+      }
+      &:active {
+        background-color: $light-grey;
+        color: $red;
+        border-right: 5px solid $white;
+        border-left: 5px solid $white;
+      }
+    }
+  }
+
+
+  .form__input {
+    text-align: left;
+    font-size: $base-font-size;
+    width: 100%;
+    background-color: $light-grey;
+    border: none;
+    padding: 10px 15px;
+
+    &::-webkit-input-placeholder{
+      color: $dark-blue;
+    }
+    &::placeholder{
+      color: $dark-blue;
+    }
+    &:focus::-webkit-input-placeholder{
+      color: transparent;
+    }
+    &:focus::placeholder{
+      color: transparent;
+    }
+    &--time{
+      width: 100px;
+      margin: 0 5px;
+    }
+  }
+}
+
+// &__textarea{
   //   color: $dark-blue;
   //   background-color: $body-bg;
   //   font-size: $font-size-small;
@@ -310,39 +424,39 @@
   //   height: 150px;
 
   //   &::-webkit-input-placeholder{
-  //     color: $dark-blue;
-  //   }
+    //     color: $dark-blue;
+    //   }
   //   &::placeholder{
-  //     color: $dark-blue;
-  //   }
+    //     color: $dark-blue;
+    //   }
   //   &:focus::-webkit-input-placeholder{
-  //     color: transparent;
-  //   }
+    //     color: transparent;
+    //   }
   //   &:focus::placeholder{
-  //     color: transparent;
-  //   }
+    //     color: transparent;
+    //   }
   // }
-  // &__time-text{
+// &__time-text{
   //   font-size: $font-size-small;
   // }
 
 
 // .recaptcha{
-//   @include mq($from:xs, $until:sm){
-//     position: relative;
-//     top: -5px;
-//     left: -35px;
-//     transform: scale(0.65);
-//   }
-// }
+  //   @include mq($from:xs, $until:sm){
+    //     position: relative;
+    //     top: -5px;
+    //     left: -35px;
+    //     transform: scale(0.65);
+    //   }
+  // }
 
 // .captcha{
-//   background-color: $body-bg;
-//   background-image: url(../img/captcha.png);
-//   background-repeat: no-repeat;
-//   background-size: 100% 100%;
-//   width: 304px;
-//   height: 78px;
-//   margin: 0 auto 30px;
-//   text-align: center;
-// }
+  //   background-color: $body-bg;
+  //   background-image: url(../img/captcha.png);
+  //   background-repeat: no-repeat;
+  //   background-size: 100% 100%;
+  //   width: 304px;
+  //   height: 78px;
+  //   margin: 0 auto 30px;
+  //   text-align: center;
+  // }

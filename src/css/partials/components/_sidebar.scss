@@ -19,7 +19,7 @@
     padding: 10px 90px;
   }
 
-  a {
+  &__btn {
     color: $white;
     @include transition();
     &:hover {
@@ -27,5 +27,12 @@
       text-decoration: underline;
     }
   }
+
+  &__item {
+    display: none;
+  }
 }
 
+.sidebar-link__item .active {
+  display: block;
+}

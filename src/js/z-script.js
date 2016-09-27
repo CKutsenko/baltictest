@@ -70,44 +70,20 @@ $(document).ready(function () {
 
 });
 
-  /* изменение названия, телефона и почты при выборе города */
-  $('.city__item').on('click', function(){
-    $('.city__name').html($(this).html());
-    $('.header__email-wrapper').html('<a class="header__email" target="_blank" href="mailto:'+$(this).data("email")+'">'+$(this).data("email")+'</a>');
-    $('.footer__email-wrapper').html('E-mail: <a class="footer__email" target="_blank" href="mailto:'+$(this).data("email")+'">'+$(this).data("email")+'</a>');
-    if ($(this).data("address") !== undefined) {
-      $('.footer__address').html('г.'+$(this).text()+', '+$(this).data("address"));
-    } else {
-      $('.footer__address').hide();
-    }
+/* Аккордеон*/
+// ACCORDION
 
-    var prefix = $(this).data("prefix");
-    var hrefPrefix = prefix.replace(/\D/g, "");
-    var tel1 = $(this).data("tel1");
-    var hrefTel1 = tel1.replace(/\D/g, "");
-    $('.header__tel-wrapper').html('<a class="header__tel" target="_blank" href="tel:+'+hrefPrefix+hrefTel1+'">'+prefix+'<span>'+tel1+'</span></a>');
-    var tel1Name = "Телефон";
-    if ($(this).data("tel2") !== undefined) {
-      var tel2 = $(this).data("tel2");
-      var hrefTel2 = tel2.replace(/\D/g, "");
-      var tel1Name = "Тел/факс";
-      $('.footer__tel-wrapper--tel2').html('Телефон: <a class="footer__tel" target="_blank" href="tel:+'+hrefPrefix+hrefTel2+'">'+prefix+'<span>'+tel2+'</span></a>');
-    } else {
-      $('.footer__tel-wrapper--tel2').hide();
-    }
-    $('.footer__tel-wrapper--tel1').html(tel1Name+': <a class="footer__tel" target="_blank" href="tel:+'+hrefPrefix+hrefTel1+'">'+prefix+'<span>'+tel1+'</span></a>');
+  // jQuery('.sidebar .widget_nav_menu ul.menu').slideUp();
+  // jQuery('.sidebar .widget_nav_menu ul.menu:has(li.current-menu-item)').slideDown();
+  // jQuery('.sidebar .widget_nav_menu h2').click(function() {
+  //   if (jQuery('#'+jQuery(this).parent().attr('id')+' ul.menu').css('display') == 'block')
+  //   {
+  //     jQuery('#' + jQuery(this).parent().attr('id')+' ul.menu').slideUp();
+  //   }
+  //   else jQuery('#' + jQuery(this).parent().attr('id')+' ul.menu').slideDown();
+  // });
 
-    if ($(this).text() == "Новосибирск") {
-      $('.footer__working-hours span:first').html($(this).data("from"));
-      $('.footer__working-hours span:last').html($(this).data("to"));
-    }
 
-    var mapRegion = "img/map/" + $(this).data("map");
-    $('.location__map-region img').attr({'src': mapRegion, 'alt': $(this).html(), 'title': $(this).html()});
-
-    $('.city__dropdown').hide();
-    return false;
-  });
 
   /* Hamburger */
   if ($(window).width() < 768) {
@@ -121,17 +97,6 @@ $(document).ready(function () {
     });
   }
 
-    /* Hamburger */
-  // if ($(window).width() < 768) {
-  //   var footerNavItem = $('.footer .footer-nav__item');
-  //   $('.footer-nav__hamburger').show();
-  //   $(footerNavItem).hide();
-  //   $('.footer-nav__hamburger').click(function(e){
-  //     e.preventDefault();
-  //     $(this).toggleClass('footer-nav__hamburger--close');
-  //     $(footerNavItem).toggle();
-  //   });
-  // }
 
   /* Открывание меню поиска по клику на иконку */
   if ($(window).width() <= 1024) {
@@ -142,7 +107,7 @@ $(document).ready(function () {
     });
   }
 
-  /* галерея "с нами уже работают" */
+  /* галерея отзывов */
   $('.map__wrapper').slick({
     infinite: true,
     slidesToShow: 1,
@@ -151,6 +116,27 @@ $(document).ready(function () {
     arrows: false,
     autoplay: true,
     autoplaySpeed: 3000
+  });
+
+  /* Модальное окно "Заказать звонок" */
+$('.page-call-btn__btn').click( function(event){ // лoвим клик пo ссылки с id="go"
+    event.preventDefault(); // выключaем стaндaртную рoль элементa
+    $('.page-call-btn__overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+      function(){ // пoсле выпoлнения предъидущей aнимaции
+        $('.page-call-btn__form')
+          .css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+          .animate({opacity: 1, top: '50%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+    });
+  });
+  /* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+  $('.page-call-btn__overlay').click( function(){ // лoвим клик пo крестику или пoдлoжке
+    $('.page-call-btn__form')
+      .animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+        function(){ // пoсле aнимaции
+          $(this).css('display', 'none'); // делaем ему display: none;
+          $('.page-call-btn__overlay').fadeOut(400); // скрывaем пoдлoжку
+        }
+      );
   });
 
   /* Review-section in the modal window */

@@ -938,12 +938,17 @@ h4 {
   padding: 10px 40px; }
   .sidebar-link:nth-of-type(3) {
     padding: 10px 90px; }
-  .sidebar-link a {
+  .sidebar-link__btn {
     color: #ffffff;
     transition: all 0.325s ease 0s; }
-    .sidebar-link a:hover {
+    .sidebar-link__btn:hover {
       font-weight: 700;
       text-decoration: underline; }
+  .sidebar-link__item {
+    display: none; }
+
+.sidebar-link__item .active {
+  display: block; }
 
 .footer-menu {
   background-color: #424347;
@@ -1131,6 +1136,28 @@ h4 {
   background-color: #f5f5fa;
   text-align: center;
   margin: 0 15px 15px; }
+  .page-call-btn__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    display: none; }
+  .page-call-btn__form {
+    display: none;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%); }
   .page-call-btn__btn {
     display: block;
     background-color: #9d2628;
@@ -1138,14 +1165,17 @@ h4 {
     font-weight: 600;
     margin: 15px;
     padding: 8px 10px;
+    border-right: 5px solid #ffffff;
+    border-left: 5px solid #ffffff;
     transition: all 0.325s ease 0s; }
     .page-call-btn__btn:hover {
-      -webkit-transform: scaleX(1.04);
-          -ms-transform: scaleX(1.04);
-              transform: scaleX(1.04); }
+      border-right: 5px solid #9d2628;
+      border-left: 5px solid #9d2628; }
     .page-call-btn__btn:active {
       background-color: #f5f5fa;
-      color: #9d2628; }
+      color: #9d2628;
+      border-right: 5px solid #ffffff;
+      border-left: 5px solid #ffffff; }
   .page-call-btn__text {
     margin-bottom: 5px; }
 
@@ -1846,6 +1876,28 @@ __text {
       padding: 23px;
       border-radius: 50%;
       border: 4px solid #33bee5; }
+  .reviews__btn {
+    display: inline-block;
+    background-color: #9d2628;
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 8px 0;
+    width: 50%;
+    outline: none;
+    margin-top: 20px;
+    border-right: 5px solid #ffffff;
+    border-left: 5px solid #ffffff;
+    transition: all 0.325s ease 0s; }
+    .reviews__btn:hover {
+      border-right: 5px solid #9d2628;
+      border-left: 5px solid #9d2628; }
+    .reviews__btn:active {
+      background-color: #f5f5fa;
+      color: #9d2628;
+      border-right: 5px solid #ffffff;
+      border-left: 5px solid #ffffff; }
 
 .reviewitem {
   text-align: left;
@@ -2594,14 +2646,17 @@ __text {
       padding: 8px 0;
       width: 95%;
       outline: none;
+      border-right: 5px solid #ffffff;
+      border-left: 5px solid #ffffff;
       transition: all 0.325s ease 0s; }
       .form--application .form-group .btn:hover {
-        -webkit-transform: scaleX(1.04);
-            -ms-transform: scaleX(1.04);
-                transform: scaleX(1.04); }
+        border-right: 5px solid #9d2628;
+        border-left: 5px solid #9d2628; }
       .form--application .form-group .btn:active {
         background-color: #f5f5fa;
-        color: #9d2628; }
+        color: #9d2628;
+        border-right: 5px solid #ffffff;
+        border-left: 5px solid #ffffff; }
   .form--application .form__input {
     text-align: left;
     font-size: 16px;
@@ -2629,81 +2684,160 @@ __text {
       width: 100px;
       margin: 0 5px; }
 
-.form--question p {
-  display: none; }
-
-.form--question .form-group {
-  width: 25%;
-  padding: 10px;
-  margin-bottom: 7px; }
-  .form--question .form-group:nth-of-type(5) {
-    margin-left: 25%;
-    width: 52%;
-    text-align: center;
-    padding-bottom: 10px;
-    padding-right: 0; }
-  .form--question .form-group:nth-of-type(3) select,
-  .form--question .form-group:nth-of-type(4) select {
+.form--question {
+  background-color: #ffffff;
+  z-index: 100; }
+  .form--question p {
+    display: none; }
+  .form--question .form-group {
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 7px; }
+    .form--question .form-group:nth-of-type(5) {
+      margin-left: 25%;
+      width: 52%;
+      text-align: center;
+      padding-bottom: 10px;
+      padding-right: 0; }
+    .form--question .form-group:nth-of-type(3) select,
+    .form--question .form-group:nth-of-type(4) select {
+      text-align: left;
+      font-size: 16px;
+      padding: 8px 55px;
+      background-color: #f5f5fa;
+      border: none;
+      width: 100%;
+      padding-left: 10px; }
+    .form--question .form-group:nth-of-type(4) select {
+      max-width: 92%;
+      margin-right: 20px; }
+    .form--question .form-group .btn {
+      display: block;
+      background-color: #9d2628;
+      border: none;
+      color: #ffffff;
+      font-weight: 700;
+      text-decoration: underline;
+      text-transform: uppercase;
+      padding: 8px 0;
+      width: 95%;
+      outline: none;
+      border-right: 5px solid #ffffff;
+      border-left: 5px solid #ffffff;
+      transition: all 0.325s ease 0s; }
+      .form--question .form-group .btn:hover {
+        border-right: 5px solid #9d2628;
+        border-left: 5px solid #9d2628; }
+      .form--question .form-group .btn:active {
+        background-color: #f5f5fa;
+        color: #9d2628;
+        border-right: 5px solid #ffffff;
+        border-left: 5px solid #ffffff; }
+  .form--question .form__input {
     text-align: left;
     font-size: 16px;
-    padding: 8px 55px;
+    width: 100%;
     background-color: #f5f5fa;
     border: none;
-    width: 100%;
-    padding-left: 10px; }
-  .form--question .form-group:nth-of-type(4) select {
-    max-width: 92%;
-    margin-right: 20px; }
-  .form--question .form-group .btn {
-    display: block;
-    background-color: #9d2628;
-    border: none;
-    color: #ffffff;
-    font-weight: 700;
-    text-decoration: underline;
-    text-transform: uppercase;
-    padding: 8px 0;
-    width: 95%;
-    outline: none;
-    transition: all 0.325s ease 0s; }
-    .form--question .form-group .btn:hover {
-      -webkit-transform: scaleX(1.04);
-          -ms-transform: scaleX(1.04);
-              transform: scaleX(1.04); }
-    .form--question .form-group .btn:active {
-      background-color: #f5f5fa;
-      color: #9d2628; }
+    padding: 10px 15px; }
+    .form--question .form__input::-webkit-input-placeholder {
+      color: #314b66; }
+    .form--question .form__input::-moz-placeholder {
+      color: #314b66; }
+    .form--question .form__input:-ms-input-placeholder {
+      color: #314b66; }
+    .form--question .form__input::placeholder {
+      color: #314b66; }
+    .form--question .form__input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    .form--question .form__input:focus::-moz-placeholder {
+      color: transparent; }
+    .form--question .form__input:focus:-ms-input-placeholder {
+      color: transparent; }
+    .form--question .form__input:focus::placeholder {
+      color: transparent; }
+    .form--question .form__input--time {
+      width: 100px;
+      margin: 0 5px; }
 
-.form--question .form__input {
-  text-align: left;
-  font-size: 16px;
-  width: 100%;
-  background-color: #f5f5fa;
-  border: none;
-  padding: 10px 15px; }
-  .form--question .form__input::-webkit-input-placeholder {
-    color: #314b66; }
-  .form--question .form__input::-moz-placeholder {
-    color: #314b66; }
-  .form--question .form__input:-ms-input-placeholder {
-    color: #314b66; }
-  .form--question .form__input::placeholder {
-    color: #314b66; }
-  .form--question .form__input:focus::-webkit-input-placeholder {
-    color: transparent; }
-  .form--question .form__input:focus::-moz-placeholder {
-    color: transparent; }
-  .form--question .form__input:focus:-ms-input-placeholder {
-    color: transparent; }
-  .form--question .form__input:focus::placeholder {
-    color: transparent; }
-  .form--question .form__input--time {
-    width: 100px;
-    margin: 0 5px; }
+.form--certificate {
+  margin: 35px 20px 10px;
+  max-width: 90%; }
+  .form--certificate .form__title {
+    margin: 10px; }
+  .form--certificate .form__text {
+    margin: 10px;
+    font-size: 18px; }
+  .form--certificate .form-group {
+    width: 100%;
+    padding: 10px;
+    padding-left: 10px;
+    margin-bottom: 7px; }
+    .form--certificate .form-group:nth-of-type(7) {
+      text-align: center;
+      padding-bottom: 10px;
+      padding-right: 0; }
+    .form--certificate .form-group:nth-of-type(5) select,
+    .form--certificate .form-group:nth-of-type(6) select {
+      text-align: left;
+      font-size: 16px;
+      padding: 8px 20px;
+      background-color: #f5f5fa;
+      border: none;
+      width: 100%;
+      padding-left: 10px; }
+    .form--certificate .form-group .btn {
+      display: inline-block;
+      background-color: #9d2628;
+      border: none;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 8px 0px;
+      width: 95%;
+      outline: none;
+      border-right: 5px solid #ffffff;
+      border-left: 5px solid #ffffff;
+      transition: all 0.325s ease 0s; }
+      .form--certificate .form-group .btn:hover {
+        border-right: 5px solid #9d2628;
+        border-left: 5px solid #9d2628; }
+      .form--certificate .form-group .btn:active {
+        background-color: #f5f5fa;
+        color: #9d2628;
+        border-right: 5px solid #ffffff;
+        border-left: 5px solid #ffffff; }
+  .form--certificate .form__input {
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+    background-color: #f5f5fa;
+    border: none;
+    padding: 10px 15px; }
+    .form--certificate .form__input::-webkit-input-placeholder {
+      color: #314b66; }
+    .form--certificate .form__input::-moz-placeholder {
+      color: #314b66; }
+    .form--certificate .form__input:-ms-input-placeholder {
+      color: #314b66; }
+    .form--certificate .form__input::placeholder {
+      color: #314b66; }
+    .form--certificate .form__input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    .form--certificate .form__input:focus::-moz-placeholder {
+      color: transparent; }
+    .form--certificate .form__input:focus:-ms-input-placeholder {
+      color: transparent; }
+    .form--certificate .form__input:focus::placeholder {
+      color: transparent; }
+    .form--certificate .form__input--time {
+      width: 100px;
+      margin: 0 5px; }
 
 .form--call {
   margin: 35px 20px 10px;
-  max-width: 90%; }
+  max-width: 90%;
+  background-color: #ffffff; }
   .form--call .form__title {
     margin: 10px; }
   .form--call .form__text {
@@ -2737,14 +2871,17 @@ __text {
       padding: 8px 0px;
       width: 95%;
       outline: none;
+      border-right: 5px solid #ffffff;
+      border-left: 5px solid #ffffff;
       transition: all 0.325s ease 0s; }
       .form--call .form-group .btn:hover {
-        -webkit-transform: scaleX(1.04);
-            -ms-transform: scaleX(1.04);
-                transform: scaleX(1.04); }
+        border-right: 5px solid #9d2628;
+        border-left: 5px solid #9d2628; }
       .form--call .form-group .btn:active {
         background-color: #f5f5fa;
-        color: #9d2628; }
+        color: #9d2628;
+        border-right: 5px solid #ffffff;
+        border-left: 5px solid #ffffff; }
   .form--call .form__input {
     text-align: left;
     font-size: 16px;
@@ -3718,6 +3855,9 @@ __text {
     height: 300px; }
   .form--question .form-group {
     width: 100%; }
+  .form--certificate .form-group:nth-of-type(7) {
+    width: 100%;
+    margin-left: 0; }
   .form--call .form-group:nth-of-type(7) {
     width: 100%;
     margin-left: 0; } }
@@ -3787,6 +3927,8 @@ __text {
     margin-right: 10px; }
   .slick-dots {
     text-align: center; }
+  .reviews__btn {
+    width: 100%; }
   .services-socials__list {
     margin: 0;
     text-align: center;
@@ -3882,6 +4024,11 @@ __text {
     width: 50%; } }
 
 @media (min-width: 33.75em) and (max-width: 63.99em) {
+  .form--certificate .form-group {
+    width: 50%; }
+  .form--certificate .form-group:nth-of-type(7) {
+    width: 50%;
+    margin-left: 25%; }
   .form--call .form-group {
     width: 50%; }
   .form--call .form-group:nth-of-type(7) {
