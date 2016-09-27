@@ -934,16 +934,25 @@ h4 {
   display: block;
   background-color: #33bee5;
   color: #ffffff;
-  margin: 10px 20px;
-  padding: 10px 40px; }
-  .sidebar-link:nth-of-type(3) {
+  margin: 10px 20px; }
+  .sidebar-link:nth-of-type(3) .sidebar-link__btn {
     padding: 10px 90px; }
+  .sidebar-link__accordion {
+    display: none;
+    background-color: #ffffff;
+    margin: 0;
+    text-align: left; }
   .sidebar-link__btn {
     color: #ffffff;
+    padding: 10px 40px;
     transition: all 0.325s ease 0s; }
     .sidebar-link__btn:hover {
       font-weight: 700;
       text-decoration: underline; }
+  .sidebar-link__item {
+    color: #010101; }
+  .sidebar-link__item a {
+    color: #33bee5; }
 
 .footer-menu {
   background-color: #424347;
@@ -1948,55 +1957,44 @@ __text {
     width: 130px;
     height: 175px;
     transition: 0.5s; }
-    .certification__img:hover {
-      opacity: 0; }
   .certification__text {
     font-size: 14px;
     line-height: 17px;
     font-weight: 600;
     margin: 20px 15px;
     position: absolute;
-    top: 10px; }
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 15px auto; }
   .certification__block {
     position: relative;
     width: 130px;
     height: 175px;
     margin: 10px 20px;
     text-align: center;
-    transition: background 1s;
-    background-size: contain; }
+    transition: 1s;
+    background-size: 130px 175px; }
+    .certification__block:hover img {
+      opacity: 0; }
     .certification__block:nth-of-type(1) {
       background-image: url(../img/services/certification-hover1.jpg); }
     .certification__block:nth-of-type(2) {
-      background-image: url(../img/services/certification2.jpg); }
-      .certification__block:nth-of-type(2):hover, .certification__block:nth-of-type(2):focus {
-        background-image: url(../img/services/certification-hover2.jpg); }
+      background-image: url(../img/services/certification-hover2.jpg); }
     .certification__block:nth-of-type(3) {
-      background-image: url(../img/services/certification3.jpg); }
-      .certification__block:nth-of-type(3):hover, .certification__block:nth-of-type(3):focus {
-        background-image: url(../img/services/certification-hover3.jpg); }
+      background-image: url(../img/services/certification-hover3.jpg); }
     .certification__block:nth-of-type(4) {
-      background-image: url(../img/services/certification4.jpg); }
-      .certification__block:nth-of-type(4):hover, .certification__block:nth-of-type(4):focus {
-        background-image: url(../img/services/certification-hover4.jpg); }
+      background-image: url(../img/services/certification-hover4.jpg); }
     .certification__block:nth-of-type(5) {
-      background-image: url(../img/services/certification5.jpg); }
-      .certification__block:nth-of-type(5):hover, .certification__block:nth-of-type(5):focus {
-        background-image: url(../img/services/certification-hover5.jpg); }
+      background-image: url(../img/services/certification-hover5.jpg); }
     .certification__block:nth-of-type(6) {
-      background-image: url(../img/services/certification6.jpg); }
-      .certification__block:nth-of-type(6):hover, .certification__block:nth-of-type(6):focus {
-        background-image: url(../img/services/certification-hover6.jpg); }
+      background-image: url(../img/services/certification-hover6.jpg); }
     .certification__block:nth-of-type(7) {
-      background-image: url(../img/services/certification7.jpg); }
+      background-image: url(../img/services/certification-hover7.jpg); }
       .certification__block:nth-of-type(7) .certification__text {
         margin: 20px 5px; }
-      .certification__block:nth-of-type(7):hover, .certification__block:nth-of-type(7):focus {
-        background-image: url(../img/services/certification-hover7.jpg); }
     .certification__block:nth-of-type(8) {
-      background-image: url(../img/services/certification8.jpg); }
-      .certification__block:nth-of-type(8):hover, .certification__block:nth-of-type(8):focus {
-        background-image: url(../img/services/certification-hover8.jpg); }
+      background-image: url(../img/services/certification-hover8.jpg); }
 
 .tech-documentation {
   padding-top: 35px;
@@ -2025,59 +2023,54 @@ __text {
       padding: 23px;
       border-radius: 50%;
       border: 4px solid #33bee5; }
+  .tech-documentation__img {
+    width: 130px;
+    height: 175px;
+    transition: 0.5s; }
   .tech-documentation__text {
     font-size: 14px;
     line-height: 17px;
     font-weight: 600;
-    margin: 20px 15px; }
+    margin: 20px 15px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 15px auto; }
   .tech-documentation__block {
+    position: relative;
     width: 130px;
     height: 175px;
     margin: 10px 20px;
     text-align: center;
-    transition: all 0.325s ease 0s; }
+    transition: 1s;
+    background-size: 130px 175px; }
+    .tech-documentation__block:hover img {
+      opacity: 0; }
     .tech-documentation__block:nth-of-type(1) {
-      background-image: url(../img/services/tech-documentation1.jpg); }
-      .tech-documentation__block:nth-of-type(1):hover, .tech-documentation__block:nth-of-type(1):focus {
-        background-image: url(../img/services/tech-documentation-hover1.jpg); }
+      background-image: url(../img/services/tech-documentation-hover1.jpg); }
     .tech-documentation__block:nth-of-type(2) {
-      background-image: url(../img/services/tech-documentation2.jpg); }
-      .tech-documentation__block:nth-of-type(2):hover, .tech-documentation__block:nth-of-type(2):focus {
-        background-image: url(../img/services/tech-documentation-hover2.jpg); }
+      background-image: url(../img/services/tech-documentation-hover2.jpg); }
     .tech-documentation__block:nth-of-type(3) {
-      background-image: url(../img/services/tech-documentation3.jpg); }
-      .tech-documentation__block:nth-of-type(3):hover, .tech-documentation__block:nth-of-type(3):focus {
-        background-image: url(../img/services/tech-documentation-hover3.jpg); }
+      background-image: url(../img/services/tech-documentation-hover3.jpg); }
     .tech-documentation__block:nth-of-type(4) {
-      background-image: url(../img/services/tech-documentation4.jpg); }
-      .tech-documentation__block:nth-of-type(4):hover, .tech-documentation__block:nth-of-type(4):focus {
-        background-image: url(../img/services/tech-documentation-hover4.jpg); }
+      background-image: url(../img/services/tech-documentation-hover4.jpg); }
     .tech-documentation__block:nth-of-type(5) {
-      background-image: url(../img/services/tech-documentation5.jpg); }
+      background-image: url(../img/services/tech-documentation-hover5.jpg); }
       .tech-documentation__block:nth-of-type(5) .tech-documentation__text {
         margin: 20px 5px; }
-      .tech-documentation__block:nth-of-type(5):hover, .tech-documentation__block:nth-of-type(5):focus {
-        background-image: url(../img/services/tech-documentation-hover5.jpg); }
     .tech-documentation__block:nth-of-type(6) {
-      background-image: url(../img/services/tech-documentation6.jpg); }
+      background-image: url(../img/services/tech-documentation-hover6.jpg); }
       .tech-documentation__block:nth-of-type(6) .tech-documentation__text {
         margin: 20px 0px; }
-      .tech-documentation__block:nth-of-type(6):hover, .tech-documentation__block:nth-of-type(6):focus {
-        background-image: url(../img/services/tech-documentation-hover6.jpg); }
     .tech-documentation__block:nth-of-type(7) {
-      background-image: url(../img/services/tech-documentation7.jpg); }
+      background-image: url(../img/services/tech-documentation-hover7.jpg); }
       .tech-documentation__block:nth-of-type(7) .tech-documentation__text {
         margin: 20px 0px; }
-      .tech-documentation__block:nth-of-type(7):hover, .tech-documentation__block:nth-of-type(7):focus {
-        background-image: url(../img/services/tech-documentation-hover7.jpg); }
     .tech-documentation__block:nth-of-type(8) {
-      background-image: url(../img/services/tech-documentation8.jpg); }
-      .tech-documentation__block:nth-of-type(8):hover, .tech-documentation__block:nth-of-type(8):focus {
-        background-image: url(../img/services/tech-documentation-hover8.jpg); }
+      background-image: url(../img/services/tech-documentation-hover8.jpg); }
     .tech-documentation__block:nth-of-type(9) {
-      background-image: url(../img/services/tech-documentation9.jpg); }
-      .tech-documentation__block:nth-of-type(9):hover, .tech-documentation__block:nth-of-type(9):focus {
-        background-image: url(../img/services/tech-documentation-hover9.jpg); }
+      background-image: url(../img/services/tech-documentation-hover9.jpg); }
 
 .rospotreb {
   padding-top: 35px;
@@ -2106,29 +2099,36 @@ __text {
       padding: 23px;
       border-radius: 50%;
       border: 4px solid #33bee5; }
+  .rospotreb__img {
+    width: 130px;
+    height: 175px;
+    transition: 0.5s; }
   .rospotreb__text {
     font-size: 14px;
     line-height: 17px;
     font-weight: 600;
-    margin: 20px 15px; }
+    margin: 20px 15px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 15px auto; }
   .rospotreb__block {
+    position: relative;
     width: 130px;
     height: 175px;
     margin: 10px 20px;
     text-align: center;
-    transition: all 0.325s ease 0s; }
+    transition: 1s;
+    background-size: 130px 175px; }
+    .rospotreb__block:hover img {
+      opacity: 0; }
     .rospotreb__block:nth-of-type(1) {
-      background-image: url(../img/services/rospotreb1.jpg); }
-      .rospotreb__block:nth-of-type(1):hover, .rospotreb__block:nth-of-type(1):focus {
-        background-image: url(../img/services/rospotreb-hover1.jpg); }
+      background-image: url(../img/services/rospotreb-hover1.jpg); }
     .rospotreb__block:nth-of-type(2) {
-      background-image: url(../img/services/rospotreb2.jpg); }
-      .rospotreb__block:nth-of-type(2):hover, .rospotreb__block:nth-of-type(2):focus {
-        background-image: url(../img/services/rospotreb-hover2.jpg); }
+      background-image: url(../img/services/rospotreb-hover2.jpg); }
     .rospotreb__block:nth-of-type(3) {
-      background-image: url(../img/services/rospotreb3.jpg); }
-      .rospotreb__block:nth-of-type(3):hover, .rospotreb__block:nth-of-type(3):focus {
-        background-image: url(../img/services/rospotreb-hover3.jpg); }
+      background-image: url(../img/services/rospotreb-hover3.jpg); }
 
 .fire-safety {
   padding-top: 35px;
@@ -2157,25 +2157,34 @@ __text {
       padding: 23px;
       border-radius: 50%;
       border: 4px solid #33bee5; }
+  .fire-safety__img {
+    width: 130px;
+    height: 175px;
+    transition: 0.5s; }
   .fire-safety__text {
     font-size: 14px;
     line-height: 17px;
     font-weight: 600;
-    margin: 20px 15px; }
+    margin: 20px 15px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 15px auto; }
   .fire-safety__block {
+    position: relative;
     width: 130px;
     height: 175px;
     margin: 10px 20px;
     text-align: center;
-    transition: all 0.325s ease 0s; }
+    transition: 1s;
+    background-size: 130px 175px; }
+    .fire-safety__block:hover img {
+      opacity: 0; }
     .fire-safety__block:nth-of-type(1) {
-      background-image: url(../img/services/fire-safety1.jpg); }
-      .fire-safety__block:nth-of-type(1):hover, .fire-safety__block:nth-of-type(1):focus {
-        background-image: url(../img/services/fire-safety-hover1.jpg); }
+      background-image: url(../img/services/fire-safety-hover1.jpg); }
     .fire-safety__block:nth-of-type(2) {
-      background-image: url(../img/services/fire-safety2.jpg); }
-      .fire-safety__block:nth-of-type(2):hover, .fire-safety__block:nth-of-type(2):focus {
-        background-image: url(../img/services/fire-safety-hover2.jpg); }
+      background-image: url(../img/services/fire-safety-hover2.jpg); }
 
 .iso {
   padding-top: 35px;
@@ -2204,41 +2213,42 @@ __text {
       padding: 23px;
       border-radius: 50%;
       border: 4px solid #33bee5; }
+  .iso__img {
+    width: 130px;
+    height: 175px;
+    transition: 0.5s; }
   .iso__text {
     font-size: 14px;
     line-height: 17px;
     font-weight: 600;
-    margin: 20px 15px; }
+    margin: 20px 15px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 15px auto; }
   .iso__block {
+    position: relative;
     width: 130px;
     height: 175px;
     margin: 10px 20px;
     text-align: center;
-    transition: all 0.325s ease 0s; }
+    transition: 1s;
+    background-size: 130px 175px; }
+    .iso__block:hover img {
+      opacity: 0; }
     .iso__block:nth-of-type(1) {
-      background-image: url(../img/services/iso1.jpg); }
-      .iso__block:nth-of-type(1):hover, .iso__block:nth-of-type(1):focus {
-        background-image: url(../img/services/iso-hover1.jpg); }
+      background-image: url(../img/services/iso-hover1.jpg); }
     .iso__block:nth-of-type(2) {
-      background-image: url(../img/services/iso2.jpg); }
-      .iso__block:nth-of-type(2):hover, .iso__block:nth-of-type(2):focus {
-        background-image: url(../img/services/iso-hover2.jpg); }
+      background-image: url(../img/services/iso-hover2.jpg); }
     .iso__block:nth-of-type(3) {
-      background-image: url(../img/services/iso3.jpg); }
-      .iso__block:nth-of-type(3):hover, .iso__block:nth-of-type(3):focus {
-        background-image: url(../img/services/iso-hover3.jpg); }
+      background-image: url(../img/services/iso-hover3.jpg); }
     .iso__block:nth-of-type(4) {
-      background-image: url(../img/services/iso4.jpg); }
-      .iso__block:nth-of-type(4):hover, .iso__block:nth-of-type(4):focus {
-        background-image: url(../img/services/iso-hover4.jpg); }
+      background-image: url(../img/services/iso-hover4.jpg); }
     .iso__block:nth-of-type(5) {
-      background-image: url(../img/services/iso5.jpg); }
-      .iso__block:nth-of-type(5):hover, .iso__block:nth-of-type(5):focus {
-        background-image: url(../img/services/iso-hover5.jpg); }
+      background-image: url(../img/services/iso-hover5.jpg); }
     .iso__block:nth-of-type(6) {
-      background-image: url(../img/services/iso6.jpg); }
-      .iso__block:nth-of-type(6):hover, .iso__block:nth-of-type(6):focus {
-        background-image: url(../img/services/iso-hover6.jpg); }
+      background-image: url(../img/services/iso-hover6.jpg); }
 
 .industrial-safety {
   padding-top: 35px;
@@ -2267,27 +2277,36 @@ __text {
       padding: 23px;
       border-radius: 50%;
       border: 4px solid #33bee5; }
+  .industrial-safety__img {
+    width: 130px;
+    height: 175px;
+    transition: 0.5s; }
   .industrial-safety__text {
     font-size: 14px;
     line-height: 17px;
     font-weight: 600;
-    margin: 20px 15px; }
+    margin: 20px 15px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 15px auto; }
   .industrial-safety__block {
+    position: relative;
     width: 130px;
     height: 175px;
     margin: 10px 20px;
     text-align: center;
-    transition: all 0.325s ease 0s; }
+    transition: 1s;
+    background-size: 130px 175px; }
+    .industrial-safety__block:hover img {
+      opacity: 0; }
     .industrial-safety__block:nth-of-type(1) {
-      background-image: url(../img/services/industrial-safety1.jpg); }
+      background-image: url(../img/services/industrial-safety-hover1.jpg); }
       .industrial-safety__block:nth-of-type(1) .industrial-safety__text {
         margin: 20px 5px; }
-      .industrial-safety__block:nth-of-type(1):hover, .industrial-safety__block:nth-of-type(1):focus {
-        background-image: url(../img/services/industrial-safety-hover1.jpg); }
     .industrial-safety__block:nth-of-type(2) {
-      background-image: url(../img/services/industrial-safety2.jpg); }
-      .industrial-safety__block:nth-of-type(2):hover, .industrial-safety__block:nth-of-type(2):focus {
-        background-image: url(../img/services/industrial-safety-hover2.jpg); }
+      background-image: url(../img/services/industrial-safety-hover2.jpg); }
 
 .product-testing {
   padding-top: 35px;
@@ -2316,29 +2335,36 @@ __text {
       padding: 23px;
       border-radius: 50%;
       border: 4px solid #33bee5; }
+  .product-testing__img {
+    width: 130px;
+    height: 175px;
+    transition: 0.5s; }
   .product-testing__text {
     font-size: 14px;
     line-height: 17px;
     font-weight: 600;
-    margin: 20px 15px; }
+    margin: 20px 15px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 15px auto; }
   .product-testing__block {
+    position: relative;
     width: 130px;
     height: 175px;
     margin: 10px 20px;
     text-align: center;
-    transition: all 0.325s ease 0s; }
+    transition: 1s;
+    background-size: 130px 175px; }
+    .product-testing__block:hover img {
+      opacity: 0; }
     .product-testing__block:nth-of-type(1) {
-      background-image: url(../img/services/product-testing1.jpg); }
-      .product-testing__block:nth-of-type(1):hover, .product-testing__block:nth-of-type(1):focus {
-        background-image: url(../img/services/product-testing-hover1.jpg); }
+      background-image: url(../img/services/product-testing-hover1.jpg); }
     .product-testing__block:nth-of-type(2) {
-      background-image: url(../img/services/product-testing2.jpg); }
-      .product-testing__block:nth-of-type(2):hover, .product-testing__block:nth-of-type(2):focus {
-        background-image: url(../img/services/product-testing-hover2.jpg); }
+      background-image: url(../img/services/product-testing-hover2.jpg); }
     .product-testing__block:nth-of-type(3) {
-      background-image: url(../img/services/product-testing3.jpg); }
-      .product-testing__block:nth-of-type(3):hover, .product-testing__block:nth-of-type(3):focus {
-        background-image: url(../img/services/product-testing-hover3.jpg); }
+      background-image: url(../img/services/product-testing-hover3.jpg); }
 
 .other-services {
   padding-top: 35px;
@@ -2367,89 +2393,68 @@ __text {
       padding: 23px;
       border-radius: 50%;
       border: 4px solid #33bee5; }
+  .other-services__img {
+    width: 130px;
+    height: 175px;
+    transition: 0.5s; }
   .other-services__text {
     font-size: 14px;
     line-height: 17px;
     font-weight: 600;
-    margin: 20px 15px; }
+    margin: 20px 15px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 15px auto; }
   .other-services__block {
+    position: relative;
     width: 130px;
     height: 175px;
     margin: 10px 20px;
     text-align: center;
-    transition: all 0.325s ease 0s; }
+    transition: 1s;
+    background-size: 130px 175px; }
+    .other-services__block:hover img {
+      opacity: 0; }
     .other-services__block:nth-of-type(1) {
-      background-image: url(../img/services/other-services1.jpg); }
+      background-image: url(../img/services/other-services-hover1.jpg); }
       .other-services__block:nth-of-type(1) .other-services__text {
         margin: 20px 5px; }
-      .other-services__block:nth-of-type(1):hover, .other-services__block:nth-of-type(1):focus {
-        background-image: url(../img/services/other-services-hover1.jpg); }
     .other-services__block:nth-of-type(2) {
-      background-image: url(../img/services/other-services2.jpg); }
-      .other-services__block:nth-of-type(2):hover, .other-services__block:nth-of-type(2):focus {
-        background-image: url(../img/services/other-services-hover2.jpg); }
+      background-image: url(../img/services/other-services-hover2.jpg); }
     .other-services__block:nth-of-type(3) {
-      background-image: url(../img/services/other-services3.jpg); }
-      .other-services__block:nth-of-type(3):hover, .other-services__block:nth-of-type(3):focus {
-        background-image: url(../img/services/other-services-hover3.jpg); }
+      background-image: url(../img/services/other-services-hover3.jpg); }
     .other-services__block:nth-of-type(4) {
-      background-image: url(../img/services/other-services4.jpg); }
-      .other-services__block:nth-of-type(4):hover, .other-services__block:nth-of-type(4):focus {
-        background-image: url(../img/services/other-services-hover4.jpg); }
+      background-image: url(../img/services/other-services-hover4.jpg); }
     .other-services__block:nth-of-type(5) {
-      background-image: url(../img/services/other-services5.jpg); }
-      .other-services__block:nth-of-type(5):hover, .other-services__block:nth-of-type(5):focus {
-        background-image: url(../img/services/other-services-hover5.jpg); }
+      background-image: url(../img/services/other-services-hover5.jpg); }
     .other-services__block:nth-of-type(6) {
-      background-image: url(../img/services/other-services6.jpg); }
-      .other-services__block:nth-of-type(6):hover, .other-services__block:nth-of-type(6):focus {
-        background-image: url(../img/services/other-services-hover6.jpg); }
+      background-image: url(../img/services/other-services-hover6.jpg); }
     .other-services__block:nth-of-type(7) {
-      background-image: url(../img/services/other-services7.jpg); }
+      background-image: url(../img/services/other-services-hover7.jpg); }
       .other-services__block:nth-of-type(7) .certification__text {
         margin: 20px 5px; }
-      .other-services__block:nth-of-type(7):hover, .other-services__block:nth-of-type(7):focus {
-        background-image: url(../img/services/other-services-hover7.jpg); }
     .other-services__block:nth-of-type(8) {
-      background-image: url(../img/services/other-services8.jpg); }
-      .other-services__block:nth-of-type(8):hover, .other-services__block:nth-of-type(8):focus {
-        background-image: url(../img/services/other-services-hover8.jpg); }
+      background-image: url(../img/services/other-services-hover8.jpg); }
     .other-services__block:nth-of-type(9) {
-      background-image: url(../img/services/other-services9.jpg); }
-      .other-services__block:nth-of-type(9):hover, .other-services__block:nth-of-type(9):focus {
-        background-image: url(../img/services/other-services-hover9.jpg); }
+      background-image: url(../img/services/other-services-hover9.jpg); }
     .other-services__block:nth-of-type(10) {
-      background-image: url(../img/services/other-services10.jpg); }
-      .other-services__block:nth-of-type(10):hover, .other-services__block:nth-of-type(10):focus {
-        background-image: url(../img/services/other-services-hover10.jpg); }
+      background-image: url(../img/services/other-services-hover10.jpg); }
     .other-services__block:nth-of-type(11) {
-      background-image: url(../img/services/other-services11.jpg); }
-      .other-services__block:nth-of-type(11):hover, .other-services__block:nth-of-type(11):focus {
-        background-image: url(../img/services/other-services-hover11.jpg); }
+      background-image: url(../img/services/other-services-hover11.jpg); }
     .other-services__block:nth-of-type(12) {
-      background-image: url(../img/services/other-services12.jpg); }
-      .other-services__block:nth-of-type(12):hover, .other-services__block:nth-of-type(12):focus {
-        background-image: url(../img/services/other-services-hover12.jpg); }
+      background-image: url(../img/services/other-services-hover12.jpg); }
     .other-services__block:nth-of-type(13) {
-      background-image: url(../img/services/other-services13.jpg); }
-      .other-services__block:nth-of-type(13):hover, .other-services__block:nth-of-type(13):focus {
-        background-image: url(../img/services/other-services-hover13.jpg); }
+      background-image: url(../img/services/other-services-hover13.jpg); }
     .other-services__block:nth-of-type(14) {
-      background-image: url(../img/services/other-services14.jpg); }
-      .other-services__block:nth-of-type(14):hover, .other-services__block:nth-of-type(14):focus {
-        background-image: url(../img/services/other-services-hover14.jpg); }
+      background-image: url(../img/services/other-services-hover14.jpg); }
     .other-services__block:nth-of-type(15) {
-      background-image: url(../img/services/other-services15.jpg); }
-      .other-services__block:nth-of-type(15):hover, .other-services__block:nth-of-type(15):focus {
-        background-image: url(../img/services/other-services-hover15.jpg); }
+      background-image: url(../img/services/other-services-hover15.jpg); }
     .other-services__block:nth-of-type(16) {
-      background-image: url(../img/services/other-services16.jpg); }
-      .other-services__block:nth-of-type(16):hover, .other-services__block:nth-of-type(16):focus {
-        background-image: url(../img/services/other-services-hover16.jpg); }
+      background-image: url(../img/services/other-services-hover16.jpg); }
     .other-services__block:nth-of-type(17) {
-      background-image: url(../img/services/other-services17.jpg); }
-      .other-services__block:nth-of-type(17):hover, .other-services__block:nth-of-type(17):focus {
-        background-image: url(../img/services/other-services-hover17.jpg); }
+      background-image: url(../img/services/other-services-hover17.jpg); }
 
 .quality-system {
   padding-top: 35px;
@@ -2478,47 +2483,46 @@ __text {
       padding: 23px;
       border-radius: 50%;
       border: 4px solid #33bee5; }
+  .quality-system__img {
+    width: 130px;
+    height: 175px;
+    transition: 0.5s; }
   .quality-system__text {
     font-size: 14px;
     line-height: 17px;
     font-weight: 600;
-    margin: 20px 5px; }
+    margin: 20px 15px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 15px auto; }
   .quality-system__block {
+    position: relative;
     width: 130px;
     height: 175px;
     margin: 10px 20px;
     text-align: center;
-    transition: all 0.325s ease 0s; }
+    transition: 1s;
+    background-size: 130px 175px; }
+    .quality-system__block:hover img {
+      opacity: 0; }
     .quality-system__block:nth-of-type(1) {
-      background-image: url(../img/services/quality-system1.jpg); }
-      .quality-system__block:nth-of-type(1):hover, .quality-system__block:nth-of-type(1):focus {
-        background-image: url(../img/services/quality-system-hover1.jpg); }
+      background-image: url(../img/services/quality-system-hover1.jpg); }
     .quality-system__block:nth-of-type(2) {
-      background-image: url(../img/services/quality-system2.jpg); }
-      .quality-system__block:nth-of-type(2):hover, .quality-system__block:nth-of-type(2):focus {
-        background-image: url(../img/services/quality-system-hover2.jpg); }
+      background-image: url(../img/services/quality-system-hover2.jpg); }
     .quality-system__block:nth-of-type(3) {
-      background-image: url(../img/services/quality-system3.jpg); }
-      .quality-system__block:nth-of-type(3):hover, .quality-system__block:nth-of-type(3):focus {
-        background-image: url(../img/services/quality-system-hover3.jpg); }
+      background-image: url(../img/services/quality-system-hover3.jpg); }
     .quality-system__block:nth-of-type(4) {
-      background-image: url(../img/services/quality-system4.jpg); }
-      .quality-system__block:nth-of-type(4):hover, .quality-system__block:nth-of-type(4):focus {
-        background-image: url(../img/services/quality-system-hover4.jpg); }
+      background-image: url(../img/services/quality-system-hover4.jpg); }
     .quality-system__block:nth-of-type(5) {
-      background-image: url(../img/services/quality-system5.jpg); }
-      .quality-system__block:nth-of-type(5):hover, .quality-system__block:nth-of-type(5):focus {
-        background-image: url(../img/services/quality-system-hover5.jpg); }
+      background-image: url(../img/services/quality-system-hover5.jpg); }
     .quality-system__block:nth-of-type(6) {
-      background-image: url(../img/services/quality-system6.jpg); }
-      .quality-system__block:nth-of-type(6):hover, .quality-system__block:nth-of-type(6):focus {
-        background-image: url(../img/services/quality-system-hover6.jpg); }
+      background-image: url(../img/services/quality-system-hover6.jpg); }
     .quality-system__block:nth-of-type(7) {
-      background-image: url(../img/services/quality-system7.jpg); }
+      background-image: url(../img/services/quality-system-hover7.jpg); }
       .quality-system__block:nth-of-type(7) .certification__text {
         margin: 20px 5px; }
-      .quality-system__block:nth-of-type(7):hover, .quality-system__block:nth-of-type(7):focus {
-        background-image: url(../img/services/quality-system-hover7.jpg); }
 
 .services-socials .row {
   -webkit-justify-content: center;

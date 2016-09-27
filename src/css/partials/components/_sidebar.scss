@@ -13,14 +13,21 @@
   background-color: $light-blue;
   color: $white;
   margin: 10px 20px;
-  padding: 10px 40px;
 
-  &:nth-of-type(3) {
+  &:nth-of-type(3) .sidebar-link__btn{
     padding: 10px 90px;
+  }
+
+  &__accordion {
+    display: none;
+    background-color: $white;
+    margin: 0;
+    text-align: left;
   }
 
   &__btn {
     color: $white;
+    padding: 10px 40px;
     @include transition();
     &:hover {
       font-weight: $bold;
@@ -29,7 +36,13 @@
   }
 
   &__item {
+    color: $black;
+  }
 
+  &__item a{
+    color: $light-blue;
   }
 }
+
+
 
