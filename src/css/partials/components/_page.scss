@@ -78,11 +78,13 @@
     font-size: $font-size +2px;
     font-weight: $bold;
     line-height: 22px;
+    margin-bottom: 5px;
   }
 
   &__text {
     line-height: 22px;
     margin: 0;
+    padding: 10px 0;
   }
 
   &__quote {
@@ -106,7 +108,11 @@
   }
 
   ol, ul {
-    margin: 0;
+    margin: 10px 0;
+  }
+
+  li {
+    padding: 3px 0;
   }
 
   &__page-list-ol {

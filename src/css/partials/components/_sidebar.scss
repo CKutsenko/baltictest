@@ -18,6 +18,10 @@
     padding: 10px 90px;
   }
 
+    &:nth-of-type(1) .sidebar-link__btn:hover{
+    padding: 10px 20px;
+  }
+
   &__accordion {
     display: none;
     background-color: $white;
@@ -27,7 +31,7 @@
 
   &__btn {
     color: $white;
-    padding: 10px 40px;
+    padding: 10px 35px;
     @include transition();
     &:hover {
       font-weight: $bold;

@@ -1,4 +1,5 @@
 .office{
+  padding-left: 20px;
   &__flags{
     img{
       margin-right: 10px;
@@ -8,14 +9,14 @@
     padding: 20px 0;
     @include mq($from:xs, $until:sm){
       padding: 0;
-    } 
+    }
 
     iframe{
       width: 100%;
       height: 400px;
       @include mq($from:xs, $until:sm){
         height: 300px;
-      }      
+      }
     }
   }
 }
