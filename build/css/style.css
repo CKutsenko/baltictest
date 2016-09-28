@@ -888,6 +888,9 @@ h4 {
   font-size: 18px;
   font-weight: normal; }
 
+.padding-block {
+  padding: 20px; }
+
 .serv-wrapper70 {
   max-width: 70%; }
   .serv-wrapper70__title {
@@ -1198,7 +1201,8 @@ h4 {
   border-left: 2px solid #33bee5;
   font-style: italic;
   color: #595959;
-  padding: 10px; }
+  padding: 10px;
+  margin: 20px 0; }
   .page-text-wrapper__quote blockquote {
     margin-bottom: 8px; }
   .page-text-wrapper__quote p {
@@ -2622,6 +2626,36 @@ __text {
   color: #010101;
   font-weight: 600; }
 
+.single-question {
+  padding: 20px 0; }
+  .single-question__title {
+    font-size: 22px;
+    font-weight: 700; }
+  .single-question__text {
+    padding-top: 25px; }
+  .single-question__name {
+    font-weight: 600; }
+  .single-question a {
+    display: block; }
+  .single-question__mail {
+    color: #33bee5; }
+  .single-question__back {
+    color: #33bee5; }
+
+.onereview {
+  padding: 15px 0;
+  border-bottom: 1px solid #33bee5;
+  position: relative;
+  margin-left: 30px; }
+  .onereview__title {
+    display: inline;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    color: #33bee5; }
+  .onereview__text {
+    text-align: left; }
+
 .page404 {
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -3061,6 +3095,77 @@ __text {
     .form--questionheader .form__input:focus::placeholder {
       color: transparent; }
     .form--questionheader .form__input--time {
+      width: 100px;
+      margin: 0 5px; }
+
+.form--review {
+  margin: 35px 20px 10px;
+  max-width: 90%;
+  background-color: #ffffff; }
+  .form--review .form__title {
+    margin: 10px; }
+  .form--review .form__text {
+    margin: 10px;
+    font-size: 18px; }
+  .form--review .form-group {
+    width: 100%;
+    padding: 10px;
+    padding-left: 10px;
+    margin-bottom: 7px; }
+    .form--review .form-group textarea {
+      text-align: left;
+      font-size: 16px;
+      padding: 8px 20px;
+      background-color: #f5f5fa;
+      border: none;
+      width: 100%;
+      padding-left: 10px;
+      color: #010101; }
+    .form--review .form-group .btn {
+      display: inline-block;
+      background-color: #9d2628;
+      border: none;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 8px 0px;
+      width: 95%;
+      outline: none;
+      border-right: 5px solid #ffffff;
+      border-left: 5px solid #ffffff;
+      transition: all 0.325s ease 0s; }
+      .form--review .form-group .btn:hover {
+        border-right: 5px solid #9d2628;
+        border-left: 5px solid #9d2628; }
+      .form--review .form-group .btn:active {
+        background-color: #f5f5fa;
+        color: #9d2628;
+        border-right: 5px solid #ffffff;
+        border-left: 5px solid #ffffff; }
+  .form--review .form__input {
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+    background-color: #f5f5fa;
+    border: none;
+    padding: 10px 15px; }
+    .form--review .form__input::-webkit-input-placeholder {
+      color: #314b66; }
+    .form--review .form__input::-moz-placeholder {
+      color: #314b66; }
+    .form--review .form__input:-ms-input-placeholder {
+      color: #314b66; }
+    .form--review .form__input::placeholder {
+      color: #314b66; }
+    .form--review .form__input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    .form--review .form__input:focus::-moz-placeholder {
+      color: transparent; }
+    .form--review .form__input:focus:-ms-input-placeholder {
+      color: transparent; }
+    .form--review .form__input:focus::placeholder {
+      color: transparent; }
+    .form--review .form__input--time {
       width: 100px;
       margin: 0 5px; }
 
