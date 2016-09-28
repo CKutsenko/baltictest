@@ -888,6 +888,9 @@ h4 {
   font-size: 18px;
   font-weight: normal; }
 
+.padding-block {
+  padding: 20px; }
+
 .serv-wrapper70 {
   max-width: 70%; }
   .serv-wrapper70__title {
@@ -937,6 +940,8 @@ h4 {
   margin: 10px 20px; }
   .sidebar-link:nth-of-type(3) .sidebar-link__btn {
     padding: 10px 90px; }
+  .sidebar-link:nth-of-type(1) .sidebar-link__btn:hover {
+    padding: 10px 20px; }
   .sidebar-link__accordion {
     display: none;
     background-color: #ffffff;
@@ -944,7 +949,7 @@ h4 {
     text-align: left; }
   .sidebar-link__btn {
     color: #ffffff;
-    padding: 10px 40px;
+    padding: 10px 35px;
     transition: all 0.325s ease 0s; }
     .sidebar-link__btn:hover {
       font-weight: 700;
@@ -1187,18 +1192,21 @@ h4 {
   margin-top: 0;
   font-size: 20px;
   font-weight: 700;
-  line-height: 22px; }
+  line-height: 22px;
+  margin-bottom: 5px; }
 
 .page-text-wrapper__text {
   line-height: 22px;
-  margin: 0; }
+  margin: 0;
+  padding: 10px 0; }
 
 .page-text-wrapper__quote {
   background-color: #f5f5fa;
   border-left: 2px solid #33bee5;
   font-style: italic;
   color: #595959;
-  padding: 10px; }
+  padding: 10px;
+  margin: 20px 0; }
   .page-text-wrapper__quote blockquote {
     margin-bottom: 8px; }
   .page-text-wrapper__quote p {
@@ -1208,7 +1216,10 @@ h4 {
     padding-bottom: 5px; }
 
 .page-text-wrapper ol, .page-text-wrapper ul {
-  margin: 0; }
+  margin: 10px 0; }
+
+.page-text-wrapper li {
+  padding: 3px 0; }
 
 .page-text-wrapper__page-list-ol {
   list-style-type: upper-alpha; }
@@ -2574,11 +2585,12 @@ __text {
   padding: 10px; }
   .interesting-article__title {
     display: block;
-    font-weight: 700; }
+    font-weight: 700;
+    font-size: 16px; }
   .interesting-article__text {
     font-style: italic;
     line-height: 22px;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0; }
   .interesting-article__more {
     display: block;
@@ -2586,7 +2598,7 @@ __text {
     padding-bottom: 20px;
     font-style: italic;
     line-height: 22px;
-    font-size: 16px;
+    font-size: 14px;
     color: #4d4d4d;
     margin-top: 20px; }
 
@@ -2622,6 +2634,46 @@ __text {
   color: #010101;
   font-weight: 600; }
 
+.single-question {
+  padding: 20px 0; }
+  .single-question__title {
+    font-size: 22px;
+    font-weight: 700; }
+  .single-question__text {
+    padding-top: 25px; }
+  .single-question__name {
+    font-weight: 600; }
+  .single-question a {
+    display: block; }
+  .single-question__mail {
+    color: #33bee5; }
+  .single-question__back {
+    color: #33bee5; }
+
+.single-review {
+  padding: 20px 0; }
+  .single-review__title {
+    font-size: 22px;
+    font-weight: 700; }
+  .single-review__text {
+    padding-top: 15px; }
+  .single-review__back {
+    color: #33bee5; }
+
+.onereview {
+  padding: 15px 0;
+  border-bottom: 1px solid #33bee5;
+  position: relative;
+  margin-left: 30px; }
+  .onereview__title {
+    display: inline;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+    color: #33bee5; }
+  .onereview__text {
+    text-align: left; }
+
 .page404 {
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -2654,14 +2706,15 @@ __text {
   .content__offices {
     margin-top: 40px; }
 
-.office__flags img {
-  margin-right: 10px; }
-
-.office__map {
-  padding: 20px 0; }
-  .office__map iframe {
-    width: 100%;
-    height: 400px; }
+.office {
+  padding-left: 20px; }
+  .office__flags img {
+    margin-right: 10px; }
+  .office__map {
+    padding: 20px 0; }
+    .office__map iframe {
+      width: 100%;
+      height: 400px; }
 
 .form {
   text-align: center;
@@ -2921,8 +2974,7 @@ __text {
     margin-bottom: 7px; }
     .form--call .form-group:nth-of-type(7) {
       text-align: center;
-      padding-bottom: 10px;
-      padding-right: 0; }
+      padding-bottom: 10px; }
     .form--call .form-group:nth-of-type(5) select,
     .form--call .form-group:nth-of-type(6) select {
       text-align: left;
@@ -2940,7 +2992,7 @@ __text {
       font-weight: 700;
       text-transform: uppercase;
       padding: 8px 0px;
-      width: 95%;
+      width: 99%;
       outline: none;
       border-right: 5px solid #ffffff;
       border-left: 5px solid #ffffff;
@@ -3061,6 +3113,77 @@ __text {
     .form--questionheader .form__input:focus::placeholder {
       color: transparent; }
     .form--questionheader .form__input--time {
+      width: 100px;
+      margin: 0 5px; }
+
+.form--review {
+  margin: 35px 20px 10px;
+  max-width: 90%;
+  background-color: #ffffff; }
+  .form--review .form__title {
+    margin: 10px; }
+  .form--review .form__text {
+    margin: 10px;
+    font-size: 18px; }
+  .form--review .form-group {
+    width: 100%;
+    padding: 10px;
+    padding-left: 10px;
+    margin-bottom: 7px; }
+    .form--review .form-group textarea {
+      text-align: left;
+      font-size: 16px;
+      padding: 8px 20px;
+      background-color: #f5f5fa;
+      border: none;
+      width: 100%;
+      padding-left: 10px;
+      color: #010101; }
+    .form--review .form-group .btn {
+      display: inline-block;
+      background-color: #9d2628;
+      border: none;
+      color: #ffffff;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 8px 0px;
+      width: 95%;
+      outline: none;
+      border-right: 5px solid #ffffff;
+      border-left: 5px solid #ffffff;
+      transition: all 0.325s ease 0s; }
+      .form--review .form-group .btn:hover {
+        border-right: 5px solid #9d2628;
+        border-left: 5px solid #9d2628; }
+      .form--review .form-group .btn:active {
+        background-color: #f5f5fa;
+        color: #9d2628;
+        border-right: 5px solid #ffffff;
+        border-left: 5px solid #ffffff; }
+  .form--review .form__input {
+    text-align: left;
+    font-size: 16px;
+    width: 100%;
+    background-color: #f5f5fa;
+    border: none;
+    padding: 10px 15px; }
+    .form--review .form__input::-webkit-input-placeholder {
+      color: #314b66; }
+    .form--review .form__input::-moz-placeholder {
+      color: #314b66; }
+    .form--review .form__input:-ms-input-placeholder {
+      color: #314b66; }
+    .form--review .form__input::placeholder {
+      color: #314b66; }
+    .form--review .form__input:focus::-webkit-input-placeholder {
+      color: transparent; }
+    .form--review .form__input:focus::-moz-placeholder {
+      color: transparent; }
+    .form--review .form__input:focus:-ms-input-placeholder {
+      color: transparent; }
+    .form--review .form__input:focus::placeholder {
+      color: transparent; }
+    .form--review .form__input--time {
       width: 100px;
       margin: 0 5px; }
 
