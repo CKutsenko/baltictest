@@ -8,14 +8,10 @@
 @import "vendor/slick";
 
 // Abstracts
-// @import "partials/abstracts/functions";
 @import "partials/abstracts/mixins";
-// @import "partials/abstracts/placeholders";
-// @import "partials/abstracts/helpers";
 @import "partials/abstracts/png-sprite";
 
 // Base
-// @import "partials/base/typography";
 @import "partials/base/template";
 
 // Components
@@ -53,11 +49,7 @@
 @import "partials/components/single-question";
 @import "partials/components/page-review";
 @import "partials/components/page404";
-
-
-@import "partials/components/content";
 @import "partials/components/office";
-
 
 @import "partials/components/form";
 @import "partials/components/form-states";

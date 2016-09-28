@@ -13,6 +13,26 @@
   background-color: $light-blue;
   color: $white;
   margin: 10px 20px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+
+  &:before {
+    content: 'Нажмите, чтобы раскрыть раздел';
+    position: absolute;
+    opacity: 0;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0.3);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
 
   &:nth-of-type(3) .sidebar-link__btn{
     padding: 10px 90px;
@@ -31,7 +51,7 @@
 
   &__btn {
     color: $white;
-    padding: 10px 35px;
+    padding: 12px 35px;
     @include transition();
     &:hover {
       font-weight: $bold;
