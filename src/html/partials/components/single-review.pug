@@ -1,0 +1,13 @@
+include ../abstracts/mixins/_onereview.pug
+include ../abstracts/bemto/bemto.pug
+
+//Single review
+.container
+  +b.page-text-wrapper
+    +e.quote
+      blockqoute Уважаемые клиенты, вы можете оставить отзыв о работе центра, высказать свои предложения и пожелания. Пожалуйста, воспользуйтесь формой ниже.
+  +b.single-review
+    +e.H2.title Огромное спасибо Вам за качественную работу!
+    +e.P.text Компания: ООО ВАК
+    +e.P.text Комментарий: Оказали оперативную помощь в получении сертификата. Была предоставлена качественная консультация.
+    +e.A.back(href="reviews.html") Назад

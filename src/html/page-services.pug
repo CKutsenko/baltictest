@@ -1,0 +1,29 @@
+extends partials/templates/template.pug
+
+block content
+  .container
+    .row
+      +b.serv-wrapper70
+        +b.SECTION.breadcrumbs
+          a(href="index.html") Главная /
+          span Наши услуги
+        +e.H1.title Наши услуги
+        include partials/components/certification.pug
+        include partials/components/tech-documentation.pug
+        include partials/components/rospotreb.pug
+        include partials/components/fire-safety.pug
+        include partials/components/iso.pug
+        include partials/components/industrial-safety.pug
+        include partials/components/product-testing.pug
+        include partials/components/other-services.pug
+        include partials/components/quality-system.pug
+        include partials/components/services-socials.pug
+        include partials/components/interesting.pug
+      +b.serv-wrapper30
+        include partials/components/sidebar.pug
+
+
+  .container
+    .row
+      .col-xs-12
+        include partials/components/map.pug

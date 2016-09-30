@@ -1,0 +1,8 @@
+mixin mapSlide(city, adress, phone1, phone, mail1, mail)
+  +b.map-slide
+    +e.P.city #{city}
+    +e.P.adress #{adress}
+    +e.P.phone
+      a(href= phone1, target="_blank") #{phone}
+    +e.P.mail
+      a(href= mail1, target="_blank") #{mail}

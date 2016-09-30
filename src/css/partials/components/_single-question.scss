@@ -1,0 +1,45 @@
+.single-question {
+  padding: 20px 0;
+
+  &__title {
+    font-size: 22px;
+    font-weight: $bold;
+  }
+
+  &__text {
+    padding-top: 25px;
+  }
+
+  &__name {
+    font-weight: $semibold;
+  }
+
+  a {
+    display: block;
+  }
+
+  &__mail {
+    color: $light-blue;
+  }
+
+  &__back {
+    color: $light-blue;
+  }
+}
+
+.single-review {
+  padding: 20px 0;
+
+  &__title {
+    font-size: 22px;
+    font-weight: $bold;
+  }
+
+  &__text {
+    padding-top: 15px;
+  }
+
+  &__back {
+    color: $light-blue;
+  }
+}

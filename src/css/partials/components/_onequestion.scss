@@ -1,0 +1,45 @@
+.onequestion {
+  padding: 15px 35px;
+  border-bottom: 1px solid $light-blue;
+  position: relative;
+
+  &__title {
+    display: inline;
+    text-align: left;
+    font-size: 18px;
+    font-weight: $semibold;
+    color: $light-blue;
+  }
+
+  &__text {
+    text-align: left;
+  }
+
+  &__name {
+    text-align: left;
+    font-weight: $semibold;
+  }
+
+  &__more {
+    margin-bottom: 10px;
+    position: absolute;
+    right: 15px;
+    bottom: 5px;
+    color: $light-blue;
+  }
+}
+
+.pagination {
+  &__item {
+    display: inline-block;
+  }
+
+  &__item a {
+    color: $light-blue;
+  }
+
+  &__item--active a {
+    color: $black;
+    font-weight: $semibold;
+  }
+}

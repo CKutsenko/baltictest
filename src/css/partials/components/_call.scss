@@ -1,0 +1,45 @@
+.call {
+  text-align: center;
+  background-color: $light-blue;
+  height: 80px;
+  width: 230px;
+  position: fixed;
+  left: -150px;
+  top: 50%;
+  display: block;
+  z-index: 1000;
+  @include transition();
+  @include mq($from:xs, $until:md){
+    height: 65px;
+    width: 200px;
+    left: -135px;
+  }
+
+  &:hover, &:focus, &:active {
+   left: 0;
+  }
+
+  &__text {
+    padding-right: 60px;
+    vertical-align: middle;
+    margin-top: 20px;
+    color: $white;
+    line-height: 18px;
+    position: relative;
+  @include mq($from:xs, $until:md){
+   margin-top: 12px;
+  }
+
+    &:after {
+      position: absolute;
+      content: '';
+      @include sprite($s-face-consult);
+      top: -10px;
+      right: 14px;
+      @include mq($from:xs, $until:md){
+        top: -10px;
+        right: 9px;
+      }
+    }
+  }
+}

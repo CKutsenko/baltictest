@@ -1,0 +1,21 @@
+extends partials/templates/template.pug
+
+block content
+  .container
+    .row
+      +b.serv-wrapper70
+        +b.SECTION.breadcrumbs
+          a(href="index.html") Главная /
+          span Отзывы
+        +e.H1.title Отзывы
+        include partials/components/reviews-header.pug
+        include partials/components/reviews-footer.pug
+
+      +b.serv-wrapper30.padding-block
+        include partials/components/sidebar_2.pug
+
+
+  .container
+    .row
+      .col-xs-12
+        include partials/components/map.pug

@@ -1,0 +1,77 @@
+.industrial-safety {
+  padding-top: 35px;
+  text-align: center;
+  padding-bottom: 20px;
+
+  .row {
+    @include mq($from:xs, $until:xl){
+      justify-content: space-around;
+    }
+  }
+
+  &__title{
+    margin: 0 0 45px;
+    font-size: $font-size-title;
+    background-color: $light-blue;
+    color: $white;
+    font-weight: $bold;
+    padding: 7px 0;
+    z-index: 10;
+    position: relative;
+
+  &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -25%;
+      left: -8px;
+      @include sprite($s-industrial-safety-icon);
+      background-color: $white;
+      padding: 23px;
+      border-radius: 50%;
+      border: 4px solid $light-blue;
+    }
+  }
+
+   &__img {
+    width: 130px;
+    height: 175px;
+    transition: 0.5s;
+  }
+
+  &__text {
+    font-size: $font-size-content;
+    line-height: 17px;
+    font-weight: $semibold;
+    margin: 20px 15px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 15px auto;
+  }
+
+  &__block {
+    position: relative;
+    width: 130px;
+    height: 175px;
+    margin: 10px 20px;
+    text-align: center;
+    transition: 1s;
+    background-size: 130px 175px;
+
+    &:hover img {
+      opacity: 0;
+    }
+
+    &:nth-of-type(1) {
+    .industrial-safety__text {
+      margin: 20px 5px;
+    }
+        background-image: url(../img/services/industrial-safety-hover1.jpg);
+    }
+    &:nth-of-type(2) {
+        background-image: url(../img/services/industrial-safety-hover2.jpg);
+    }
+  }
+}

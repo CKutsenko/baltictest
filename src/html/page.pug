@@ -1,0 +1,22 @@
+extends partials/templates/template.pug
+
+block content
+  .container
+    .row
+      +b.serv-wrapper70
+        .container
+          +b.SECTION.breadcrumbs
+            a(href="index.html") Главная /
+            span Наши услуги
+          +e.H1.title Наши услуги
+          include partials/components/page-inner.pug
+          include partials/components/services-socials.pug
+          include partials/components/interesting.pug
+      +b.serv-wrapper30
+        include partials/components/sidebar.pug
+
+
+  .container
+    .row
+      .col-xs-12
+        include partials/components/map.pug

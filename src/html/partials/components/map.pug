@@ -1,0 +1,16 @@
+include ../abstracts/mixins/_map-slide.pug
+include ../abstracts/bemto/bemto.pug
+
+//Map
++b.SECTION.map
+  +e.H1.title Как нас найти
+  .container
+    .row
+      .col-xs-12.col-md-6.col-lg-4
+        +e.wrapper
+          +mapSlide('Санкт-Петербург','Московский пр-кт, строение 19, корпус 11','tel:8812223344','(812) 222-33-44','mailto:peterburg@baltictest.ru', 'peterburg@baltictest.ru')
+          +mapSlide('Санкт-Петербург','Московский пр-кт, строение 19, корпус 11','tel:8812223344','(812) 222-33-44','mailto:peterburg@baltictest.ru', 'peterburg@baltictest.ru')
+          +mapSlide('Санкт-Петербург','Московский пр-кт, строение 19, корпус 11','tel:8812223344','(812) 222-33-44','mailto:peterburg@baltictest.ru', 'peterburg@baltictest.ru')
+          +mapSlide('Санкт-Петербург','Московский пр-кт, строение 19, корпус 11','tel:8812223344','(812) 222-33-44','mailto:peterburg@baltictest.ru', 'peterburg@baltictest.ru')
+      .col-md-6.col-lg-8
+        +e.bgr

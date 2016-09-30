@@ -1,0 +1,6 @@
+mixin oneQuestion(title, text, name)
+  +b.onequestion
+    +e.A.title(href="single-question.html") #{title}
+    +e.P.text #{text}
+    +e.P.name #{name}
+    +e.A.more(href="single-question.html")  Читать ответ

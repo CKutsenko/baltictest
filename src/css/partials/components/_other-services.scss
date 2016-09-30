@@ -1,0 +1,125 @@
+.other-services {
+  padding-top: 35px;
+  text-align: center;
+  padding-bottom: 20px;
+
+  .row {
+    @include mq($from:xs, $until:xl){
+      justify-content: space-around;
+    }
+  }
+
+  &__title{
+    margin: 0 0 45px;
+    font-size: $font-size-title;
+    background-color: $light-blue;
+    color: $white;
+    font-weight: $bold;
+    padding: 7px 0;
+    z-index: 10;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -25%;
+      left: -8px;
+      @include sprite($s-other-services-icon);
+      background-color: $white;
+      padding: 23px;
+      border-radius: 50%;
+      border: 4px solid $light-blue;
+    }
+  }
+
+  &__img {
+    width: 130px;
+    height: 175px;
+    transition: 0.5s;
+  }
+
+  &__text {
+    font-size: $font-size-content;
+    line-height: 17px;
+    font-weight: $semibold;
+    margin: 20px 15px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: 15px auto;
+  }
+
+  &__block {
+    position: relative;
+    width: 130px;
+    height: 175px;
+    margin: 10px 20px;
+    text-align: center;
+    transition: 1s;
+    background-size: 130px 175px;
+
+    &:hover img {
+      opacity: 0;
+    }
+
+
+    &:nth-of-type(1) {
+      .other-services__text{
+        margin: 20px 5px;}
+        background-image: url(../img/services/other-services-hover1.jpg);
+      }
+      &:nth-of-type(2) {
+        background-image: url(../img/services/other-services-hover2.jpg);
+      }
+      &:nth-of-type(3) {
+        background-image: url(../img/services/other-services-hover3.jpg);
+      }
+      &:nth-of-type(4) {
+        background-image: url(../img/services/other-services-hover4.jpg);
+      }
+      &:nth-of-type(5) {
+        background-image: url(../img/services/other-services-hover5.jpg);
+      }
+      &:nth-of-type(6) {
+        background-image: url(../img/services/other-services-hover6.jpg);
+      }
+      &:nth-of-type(7) {
+        .certification__text{
+          margin: 20px 5px;
+        }
+        background-image: url(../img/services/other-services-hover7.jpg);
+      }
+      &:nth-of-type(8) {
+        background-image: url(../img/services/other-services-hover8.jpg);
+      }
+      &:nth-of-type(9) {
+        background-image: url(../img/services/other-services-hover9.jpg);
+      }
+      &:nth-of-type(10) {
+        background-image: url(../img/services/other-services-hover10.jpg);
+      }
+      &:nth-of-type(11) {
+        background-image: url(../img/services/other-services-hover11.jpg);
+      }
+      &:nth-of-type(12) {
+        background-image: url(../img/services/other-services-hover12.jpg);
+      }
+      &:nth-of-type(13) {
+        background-image: url(../img/services/other-services-hover13.jpg);
+      }
+      &:nth-of-type(14) {
+        background-image: url(../img/services/other-services-hover14.jpg);
+      }
+      &:nth-of-type(15) {
+        background-image: url(../img/services/other-services-hover15.jpg);
+      }
+      &:nth-of-type(16) {
+        background-image: url(../img/services/other-services-hover16.jpg);
+      }
+      &:nth-of-type(17) {
+        background-image: url(../img/services/other-services-hover17.jpg);
+      }
+    }
+  }

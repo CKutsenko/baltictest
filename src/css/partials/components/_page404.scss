@@ -1,0 +1,34 @@
+.page404 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &__title {
+    color: $red;
+  }
+
+  &__treatment {
+    font-size: 24px;
+    color: $red;
+    font-weight: $bold;
+  }
+
+  &__img {
+    padding-right: 20px;
+  }
+
+  &__text {
+    line-height: 25px;
+    padding-bottom: 15px;
+    padding-right: 30px;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    color: $red;
+  }
+
+  &__item a {
+    color: $light-blue;
+  }
+}

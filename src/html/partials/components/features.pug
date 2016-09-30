@@ -1,0 +1,18 @@
+include ../abstracts/mixins/_features-item.pug
+include ../abstracts/bemto/bemto.pug
+
+//Features
++b.SECTION.features
+  +e.H1.title Как получить документ
+  .container
+    .row
+      .col-xs-12.push-lg-2.col-lg-9
+        +featuresItem("Сначала нужно отправить заявку, связавшись с одним из наших специалистов")
+        +featuresItem("Затем нужно отправить заявку, связавшись с одним из наших специалистов")
+        +featuresItem("И вновь нужно отправить заявку, связавшись с одним из наших специалистов")
+        +featuresItem("И, конечно же, нужно отправить заявку, связавшись с одним из наших специалистов")
+      .col-xs-12.col-md-6
+        +e.P.ask У вас остались вопросы?
+      .col-xs-12.col-md-6
+        +e.btn-wrapper
+          +e.A.question(href="questions.html") Обращайтесь

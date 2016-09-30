@@ -1,0 +1,20 @@
+include ../abstracts/bemto/bemto.pug
+
+//404
++b.SECTION.page404
+  .container
+    .row
+      .col-xs-12.col-md-6
+        +e.H1.title Ошибка 404
+        +e.IMG.img(src="img/404.jpg")
+      .col-xs-12.col-md-6
+        +e.H2.treatment Дорогой посетитель
+        +e.P.text Мы с удовольствием исполним Ваши желания в оформлении документов, ответим на ваши вопросы и поможем найти правильные решения.
+        +e.P.text Для этого нужно просто перейти на соответствующую страницу, например, выбрав соответствующий пункт меню.
+        +e.P.text А еще вы можете просто нажать здесь:
+        +e.UL.list
+          +e.LI.item
+            a(href="index.html") Главная
+          +e.LI.item
+            a(href="page-services.html") Наши услуги
+

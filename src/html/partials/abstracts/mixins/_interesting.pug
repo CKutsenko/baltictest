@@ -1,0 +1,5 @@
+mixin interestingItem(title, text)
+  +b.interesting-article
+    +e.H3.title #{title}
+    +e.P.text #{text}
+    +e.A.more(href="page.html", target="_blank") >> Читать далее

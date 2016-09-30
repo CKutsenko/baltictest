@@ -1,0 +1,37 @@
+.totop {
+  background-color: $light-blue;
+  width: 80px;
+  height: 20px;
+  position: fixed;
+  left: 90%;
+  top: 77%;
+  z-index: 1000;
+  text-align: center;
+  display: none;
+  @include mq($from:xs, $until:md){
+    left: 72%;
+    top: 96%;
+  }
+  @include mq($from:md, $until:xl){
+    left: 87%;
+    top: 96%;
+  }
+
+  &__text {
+    color: $white;
+    margin-bottom: 30px;
+    position: relative;
+    top: -37px;
+    font-size: $font-size-content;
+  }
+
+  &__tringle {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 15px solid $light-blue;
+  position: relative;
+  top: -37px;
+  }
+}

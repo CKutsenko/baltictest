@@ -1,0 +1,20 @@
+extends partials/templates/template.pug
+
+block content
+  .container
+    .row
+      +b.serv-wrapper70
+        +b.SECTION.breadcrumbs
+          a(href="index.html") Главная /
+          span Заказать звонок. Бесплатная консультация
+        +e.H1.title Заказать звонок. Бесплатная консультация
+        include partials/components/consult-form.pug
+
+      +b.serv-wrapper30.padding-block
+        include partials/components/sidebar_2.pug
+
+
+  .container
+    .row
+      .col-xs-12
+        include partials/components/map.pug

@@ -1,0 +1,14 @@
+extends partials/templates/template.pug
+
+block content
+  .container
+    .row
+      +b.serv-wrapper70
+        +b.SECTION.breadcrumbs
+          a(href="index.html") Главная /
+          span Контакты
+        +e.H1.title Контакты
+        include partials/components/contacts.pug
+
+      +b.serv-wrapper30.padding-block
+        include partials/components/sidebar_2.pug

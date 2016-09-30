@@ -1,0 +1,8 @@
+mixin reviewItem(img, title, text)
+  +b.reviewitem.row
+    .col-xs-12.col-lg-4.col-xl-3
+      +e.img
+        img(src= "img/" + img alt)
+    +e.text-wrapper.col-xs-12.col-lg-8.col-xl-9
+      +e.H2.title #{title}
+      +e.P.text #{text}
