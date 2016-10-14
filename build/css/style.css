@@ -1617,12 +1617,12 @@ h4 {
     height: 100px; }
   .advantages:nth-of-type(2) .advantages__img:before {
     background-image: url(../img/png-sprite.png);
-    background-position: -100px 0px;
+    background-position: 0px 0px;
     width: 100px;
     height: 100px; }
   .advantages:nth-of-type(3) .advantages__img:before {
     background-image: url(../img/png-sprite.png);
-    background-position: 0px -100px;
+    background-position: -100px 0px;
     width: 100px;
     height: 100px; }
   .advantages__head {
@@ -1702,7 +1702,7 @@ __text {
     height: 42px; }
   .services__item:nth-of-type(4) .services__wrapper:after {
     background-image: url(../img/png-sprite.png);
-    background-position: -318px -160px;
+    background-position: -318px -196px;
     width: 33px;
     height: 36px; }
   .services__item:nth-of-type(5) .services__wrapper:after {
@@ -1712,7 +1712,7 @@ __text {
     height: 37px; }
   .services__item:nth-of-type(6) .services__wrapper:after {
     background-image: url(../img/png-sprite.png);
-    background-position: -318px -196px;
+    background-position: -318px -160px;
     width: 33px;
     height: 36px; }
   .services__item:nth-of-type(7) .services__wrapper:after {
@@ -2056,7 +2056,7 @@ __text {
       top: -25%;
       left: -8px;
       background-image: url(../img/png-sprite.png);
-      background-position: -200px -122px;
+      background-position: -58px -258px;
       width: 58px;
       height: 58px;
       background-color: #ffffff;
@@ -2368,7 +2368,7 @@ __text {
       top: -25%;
       left: -8px;
       background-image: url(../img/png-sprite.png);
-      background-position: -58px -258px;
+      background-position: -200px -122px;
       width: 58px;
       height: 58px;
       background-color: #ffffff;
@@ -2728,7 +2728,8 @@ __text {
 .form {
   text-align: center;
   width: 100%;
-  border: 1px solid #33bee5; }
+  border: 1px solid #33bee5;
+  z-index: 1000; }
   .form__form {
     display: -webkit-flex;
     display: -moz-flex;
