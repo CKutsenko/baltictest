@@ -20,6 +20,10 @@
     text-transform: uppercase;
     font-size: $font-size-subtitle;
   }
+
+  &__input {
+    border: none;
+  }
 }
 
 .form--application {
@@ -91,7 +95,7 @@
     font-size: $base-font-size;
     width: 100%;
     background-color: $light-grey;
-    border: none;
+    // border: none;
     padding: 10px 15px;
 
     &::-webkit-input-placeholder{
@@ -194,7 +198,7 @@
     font-size: $base-font-size;
     width: 100%;
     background-color: $light-grey;
-    border: none;
+    // border: none;
     padding: 10px 15px;
 
     &::-webkit-input-placeholder{
@@ -292,7 +296,7 @@
     font-size: $base-font-size;
     width: 100%;
     background-color: $light-grey;
-    border: none;
+    // border: none;
     padding: 10px 15px;
 
     &::-webkit-input-placeholder{
@@ -390,7 +394,7 @@
     font-size: $base-font-size;
     width: 100%;
     background-color: $light-grey;
-    border: none;
+    // border: none;
     padding: 10px 15px;
 
     &::-webkit-input-placeholder{
@@ -501,7 +505,7 @@
     font-size: $base-font-size;
     width: 100%;
     background-color: $light-grey;
-    border: none;
+    // border: none;
     padding: 10px 15px;
 
     &::-webkit-input-placeholder{
@@ -584,7 +588,7 @@
     font-size: $base-font-size;
     width: 100%;
     background-color: $light-grey;
-    border: none;
+    // border: none;
     padding: 10px 15px;
 
     &::-webkit-input-placeholder{

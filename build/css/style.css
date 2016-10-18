@@ -1166,21 +1166,26 @@ h4 {
     z-index: 8;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    cursor: pointer;
     display: none; }
-  .page-call-btn__form {
-    display: none;
-    max-width: 900px;
-    margin: auto;
-    position: relative;
+  .page-call-btn__bgr {
+    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%); }
+    width: 100%;
+    height: 100%;
+    z-index: 8;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer; }
+  .page-call-btn__form {
+    width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 9; }
   .page-call-btn__btn {
     display: block;
     background-color: #9d2628;
@@ -2746,6 +2751,8 @@ __text {
     font-weight: 700;
     text-transform: uppercase;
     font-size: 20px; }
+  .form__input {
+    border: none; }
 
 .form--application {
   margin-top: 20px; }
@@ -2796,7 +2803,6 @@ __text {
     font-size: 16px;
     width: 100%;
     background-color: #f5f5fa;
-    border: none;
     padding: 10px 15px; }
     .form--application .form__input::-webkit-input-placeholder {
       color: #314b66; }
@@ -2872,7 +2878,6 @@ __text {
     font-size: 16px;
     width: 100%;
     background-color: #f5f5fa;
-    border: none;
     padding: 10px 15px; }
     .form--question .form__input::-webkit-input-placeholder {
       color: #314b66; }
@@ -2946,7 +2951,6 @@ __text {
     font-size: 16px;
     width: 100%;
     background-color: #f5f5fa;
-    border: none;
     padding: 10px 15px; }
     .form--certificate .form__input::-webkit-input-placeholder {
       color: #314b66; }
@@ -3020,7 +3024,6 @@ __text {
     font-size: 16px;
     width: 100%;
     background-color: #f5f5fa;
-    border: none;
     padding: 10px 15px; }
     .form--call .form__input::-webkit-input-placeholder {
       color: #314b66; }
@@ -3104,7 +3107,6 @@ __text {
     font-size: 16px;
     width: 100%;
     background-color: #f5f5fa;
-    border: none;
     padding: 10px 15px; }
     .form--questionheader .form__input::-webkit-input-placeholder {
       color: #314b66; }
@@ -3175,7 +3177,6 @@ __text {
     font-size: 16px;
     width: 100%;
     background-color: #f5f5fa;
-    border: none;
     padding: 10px 15px; }
     .form--review .form__input::-webkit-input-placeholder {
       color: #314b66; }
@@ -3205,7 +3206,7 @@ __text {
   border: 2px solid #d9534f;
   box-shadow: none; }
 
-.has-error .help-block-error {
+.has-error .help-block {
   display: block; }
 
 .help-block {
@@ -4183,6 +4184,8 @@ __text {
   .socials__item{
     float: none;
     margin-left: 5px; }
+  .page-call-btn__form{
+    width: 260px; }
   .call{
     height: 65px;
     width: 200px;

@@ -9,7 +9,7 @@
     border: 2px solid $error;
     box-shadow: none;
   }
-  .help-block-error{
+  .help-block{
     display: block;
   }
 }
@@ -19,9 +19,9 @@
 }
 
 .form-group{
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
 }
 
-.field-question-recaptcha .g-recaptcha > div { 
+.field-question-recaptcha .g-recaptcha > div {
   margin: 0 auto
 }
